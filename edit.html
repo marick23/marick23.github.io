@@ -2,14 +2,16 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marick</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
     <link href="./css/marick.css" rel="stylesheet" type="text/css">
     <link href="./css/bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/2dc05c0136.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header>
         <div class="container bg-white fixed-top">
             <ul class="nav justify-content-end border-bottom">
@@ -87,101 +89,112 @@
                       <a class="nav-link text-body h5" href="./KFA_list.html">KFA</a>
                     </li>
                   </div>
-
               </ul>
             </div>
         </div>
     </header>
-    <main class="mt-5">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">KFA  ></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">국가대표 <span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-    </main>
-      <main class="mt-5">
-        <div class="container">
-            <div class="row g-3">
-                <div class="col-1g-9 col-md-15">
-                    <div class="card-deck">
-                        <div class="card">
-                            <img src="./image/유니폼/kfa 22-24 홈.png" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">KFA 국가대표</h5>
-                                <p><a href="product_kfa_home.html" class="text-primary">22-24시즌 홈 유니폼</a></p>
-                                <p class="card-text text-right">109,000원</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="./image/유니폼/kfa 22-24 원정.png" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">KFA 원정 유니폼</h5>
-                                <p><a href="product_kfa_away.html" class="text-primary">22-24시즌 원정 유니폼</a></p>
-                                <p class="card-text text-right">109,000원</p>
-                            </div>
-                        </div>
+    <section>
+        <div class="board_wrap">
+            <div class="board_title">
+                <strong>공지사항</strong>
+                <p>공지사항을 빠르고 정확하게 안내해드리겠습니다.</p>
+            </div>
+            <div class="board_write_wrap">
+                <div class="board_write">
+                    <div class="title">
+                        <dl>
+                            <dt>제목</dt>
+                            <dd>
+                                <input type="text" placeholder="제목 입력" value="글 제목이 들어갑니다.">
+                            </dd>
+                        </dl>
                     </div>
+                    <div class="info">
+                        <dl>
+                            <dt>글쓴이</dt>
+                            <dd>
+                                <input type="text" placeholder="글쓴이 입력" value="김아름">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>비밀번호</dt>
+                            <dd>
+                                <input type="password"
+                                       placeholder="비밀번호 입력"
+                                       value="1234">
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="cont">
+                        <textarea placeholder="내용 입력">
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.</textarea>
+                    </div>
+                </div>
+                <div class="bt_wrap">
+                    <a href="view.html" class="on">수정</a>
+                    <a href="notice.html">취소</a>
                 </div>
             </div>
         </div>
-      </main>
+    </section>
+
     <footer>
-      <div class="p-1 mb-2 mt-5 bg-dark text-white">
-          <div class="container">
-              <footer class="pb-1">
-                  <ul class="nav nav-pills nav-justified">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary text-white">회사소개</a></li>
-                    <li class="nav-item"><a href="notice.html" class="nav-link px-2 text-body-secondary text-white">공지사항</a></li>
-                    <li class="nav-item"><a href="Event.html" class="nav-link px-2 text-body-secondary text-white">이벤트공지</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary text-white">개인정보처리방침</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary text-white">이용약관</a></li>
-                  </ul>
-              </footer>
+          <div class="p-1 mb-2 mt-5 bg-dark text-white">
+              <div class="container">
+                  <footer class="pb-1">
+                      <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary text-white">회사소개</a></li>
+                        <li class="nav-item"><a href="notice.html" class="nav-link px-2 text-body-secondary text-white">공지사항</a></li>
+                        <li class="nav-item"><a href="Event.html" class="nav-link px-2 text-body-secondary text-white">이벤트공지</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary text-white">개인정보처리방침</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary text-white">이용약관</a></li>
+                      </ul>
+                  </footer>
+              </div>
+              <div class="border-bottom mb-4"></div>
+
+              <div class="container">
+                  <footer class="nav justify-content-center">
+
+                      <div class="col mb-3">
+                        <h5><strong>BANK INFO</strong></h5>
+                        <ul class="nav flex-column my-3">
+                          <li class="nav-item mb-2 nav-link p-0 text-body-secondary">은행주: 계좌번호</li>
+                          <li class="nav-item mb-2 nav-link p-0 text-body-secondary" >입금주</li>
+                          <li class="nav-item mb-2 nav-link p-0 text-body-secondary">입금 기한</li>
+                        </ul>
+                      </div>
+
+                      <div class="col mb-6">
+                        <h5><strong>CUSTOMER INFO</strong></h5>
+                        <ul class="nav flex-column my-3">
+                          <h3><li class="nav-item mb-2 nav-link p-0 text-body-secondary">070-1234-5678</li></h3>
+                          <li class="nav-item mb-2 nav-link p-0 text-body-secondary">Open : am 10:00 ~ pm 17:00<br>Lunch : pm 12:00 ~ pm 13:00<br>(토, 일, 공휴일 휴무)</li>
+                        </ul>
+                      </div>
+
+                      <div class="col mb-3">
+                        <h5><strong>COMPANY INFO</strong></h5>
+                        <ul class="nav flex-column my-3">
+                          <li class="nav-item mb-2 nav-link p-0 text-body-secondary">Company : (주)marick</li>
+                          <li class="nav-item mb-2 nav-link p-0 text-body-secondary">Address : 호서대학교</li>
+                          <li class="nav-item mb-2 nav-link p-0 text-body-secondary">Tel : 070-1234-5678</li>
+                          <li class="nav-item mb-2 nav-link p-0 text-body-secondary">E-mail : marick@gmail.com</li>
+                        </ul>
+                      </div>
+                    </footer>
+              </div>
           </div>
-          <div class="border-bottom mb-4"></div>
-
-          <div class="container">
-              <footer class="nav justify-content-center">
-
-                  <div class="col mb-3">
-                    <h5><strong>BANK INFO</strong></h5>
-                    <ul class="nav flex-column my-3">
-                      <li class="nav-item mb-2 nav-link p-0 text-body-secondary">은행주: 계좌번호</li>
-                      <li class="nav-item mb-2 nav-link p-0 text-body-secondary" >입금주</li>
-                      <li class="nav-item mb-2 nav-link p-0 text-body-secondary">입금 기한</li>
-                    </ul>
-                  </div>
-
-                  <div class="col mb-6">
-                    <h5><strong>CUSTOMER INFO</strong></h5>
-                    <ul class="nav flex-column my-3">
-                      <h3><li class="nav-item mb-2 nav-link p-0 text-body-secondary">070-1234-5678</li></h3>
-                      <li class="nav-item mb-2 nav-link p-0 text-body-secondary">Open : am 10:00 ~ pm 17:00<br>Lunch : pm 12:00 ~ pm 13:00<br>(토, 일, 공휴일 휴무)</li>
-                    </ul>
-                  </div>
-
-                  <div class="col mb-3">
-                    <h5><strong>COMPANY INFO</strong></h5>
-                    <ul class="nav flex-column my-3">
-                      <li class="nav-item mb-2 nav-link p-0 text-body-secondary">Company : (주)marick</li>
-                      <li class="nav-item mb-2 nav-link p-0 text-body-secondary">Address : 호서대학교</li>
-                      <li class="nav-item mb-2 nav-link p-0 text-body-secondary">Tel : 070-1234-5678</li>
-                      <li class="nav-item mb-2 nav-link p-0 text-body-secondary">E-mail : marick@gmail.com</li>
-                    </ul>
-                  </div>
-                </footer>
-          </div>
-      </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
 </body>
 </html>
