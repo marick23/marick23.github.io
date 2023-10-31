@@ -5,7 +5,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86b56f18-1251-499d-9a3c-e250d9f3423a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/marick23.github.io.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Event.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/Event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Event_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/Event_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Event_detail_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/Event_detail_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Event_detail_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/Event_detail_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Event_detail_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/Event_detail_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/KFA_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOTD.html" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/templates/OOTD/OOTD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOTD_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/templates/OOTD/OOTD_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/busan_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/busan_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart/templates/cart/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company1.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/company1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daegu_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/daegu_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dajeon_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/dajeon_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwanggu_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/gwanggu_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwangwon_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/gwangwon_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incheon_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/incheon_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infor.html" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/templates/mypage/infor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeonbuk_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/jeonbuk_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memberjoin.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/memberjoin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/templates/mypage/mypage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nv.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/paymentpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/paymentpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pohang_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/pohang_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product(2)_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/product(2)_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_busan_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_busan_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_busan_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_busan_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_daegu_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_daegu_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_daegu_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_daegu_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_daejeon_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_daejeon_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_gwanggu_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_gwanggu_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_gwanggu_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_gwanggu_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_gwangwon_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_gwangwon_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_gwangwon_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_gwangwon_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_incheon_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_incheon_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_incheon_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_incheon_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_jeonbuk_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_jeonbuk_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_jeonbuk_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_jeonbuk_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_kfa_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_kfa_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_kfa_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_kfa_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/product_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_pohang_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_pohang_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_pohang_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_pohang_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_seoul_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_seoul_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_seoul_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_seoul_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_suwon_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_suwon_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_suwon_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_suwon_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_suwonfc_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_suwonfc_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_suwonfc_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_suwonfc_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_ulsan_away.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_ulsan_away.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_ulsan_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/templates/product_detail/product_ulsan_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/searchingpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seoul_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/seoul_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/suwon_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/suwon_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/suwonfc_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/suwonfc_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ulsan_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/ulsan_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/write.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/write.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +101,18 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/rkdus/github/marick23.github.io/single_pages"
+    "last_opened_file_path": "C:/Users/rkdus/github/marick23.github.io/product/templates/product"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rkdus\github\marick23.github.io" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\product\templates\product" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\single_pages\templates\single_pages" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\product_detail\templates\product_detail" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\mypage\templates\mypage" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\payment\templates\payment" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
