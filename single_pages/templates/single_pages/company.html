@@ -1,15 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Scrolling Nav - Start Bootstrap Template</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <meta charset="utf-8">
+        <title>company</title>
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.co.css" rel="stylesheet" />
-        <link href="./css/bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'single_pages/css/styles.co.css' %}" rel="stylesheet" />
+        <link rel="stylesheet" href="{% static 'single_pages/bootstrap/bootstrap.min.css' %}" type="text/css">
         <script src="https://kit.fontawesome.com/2dc05c0136.js" crossorigin="anonymous"></script>
     </head>
 
@@ -112,17 +109,12 @@
         <section id="about">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>About Marick</h2>
+                    <div class="col-lg-12">
+                        <h1>About Marick</h1>
                         <br>
-                        <p class="lead">Marick는 고객들의 불편함을 최소화 시켜주기 위한 사이트 입니다.</p>
-                        <br>
-                        <ul>
-                            <li>축구 구단의 유니폼 및 굿즈의 경우 각자 스폰서로 정해져 있는 브랜드가 다르기 때문에 각자 다른 사이트를 통하여 구매를 할 수 있지만, Marick에서는 스폰서와의 협약으로 여러 사이트들을 방문하고 주문하는 과정을 최소화 했습니다.</li>
-                            <li>해외의 경우 브랜드가 달라도 구단을 통합해서 굿즈를 판매하기 때문에 해외와 국내를 통합하지 않고 국내 구단의 유니폼만을 취급하고 있습니다.</li>
-                            <li>국내 구단의 경우, 해외 구단에 비해 인지도와 선호도가 떨어지지만 국내 국가대표 선수들의 유니폼을 같이 판매하여 고객님들의 니즈를 충족 시켜주기 위해 노력하고 있습니다.</li>
-                            <li>Marick는 스폰서를 통해 마킹이나 패치가 없는 유니폼도 같이 판매하고 있습니다. 이는 축구 팬이 아닌 고객님들의 니즈를 충족 시켜주기 위한 Marick의 신념입니다.</li>
-                        </ul>
+                        <h3 class="lead">나의 리그, 나의 응원팀을 찾는 고객님들이 Marick에서 간편한 쇼핑을 하길 바라는 마음으로 운영합니다.</h3>
+
+                        <h1 class="lead">K리그 뿐만 아니라 국가대표 선수들의 유니폼을 같이 판매하여 고객님들의 니즈를 충족시켜주기 위해 노력하고 있습니다.</h1>
                     </div>
                 </div>
             </div>
@@ -131,10 +123,19 @@
         <section class="bg-light" id="services">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>Services</h2>
+                    <div class="col-lg-12">
+                        <h1>Innovation</h1>
                         <br>
-                        <p class="lead">Marick는 굿즈 공장과의 협업을 통하여 더 저렴한 가격으로 고객님들에게 상품을 제공합니다. 다양한 구단을 응원하는 고객님들을 위해 국내리그와 국가대표팀의 유니폼을 함께 취급합니다. 브랜드와 구단과의 협력을 통해 고객 맞춤 프로모션을 진행하고 있습니다.</p>
+                        <h3>Contents</h3>
+                        <h4 class="lead">판매 외에도 월드컵경기 안내, 유니폼을 일상생활에 녹여낸 OOTD 등 다양한 콘텐츠를 제공합니다.</h4>
+                        <br>
+                        <h3>Platform</h3>
+                        <h4 class="lead">스폰서 협약을 통해 여러 구단을 Marick에서 만나보실 수 있습니다.</h4>
+                        <h4 class="lead">K리그 뿐만 아니라 국가대표 선수들의 유니폼을 같이 판매하여 고객님들의 니즈를 충족시켜주기 위해 노력하고 있습니다.</h4>
+                        <h4 class="lead">MD샵에서 보지못했던 우승팀 유니폼 할인프로모션까지 Marick만이 할수있는 프로모션을 진행합니다.</h4>
+                        <br>
+                        <h3>Interface</h3>
+                        <h4 class="lead">명료한 카테고리, 구단과 스폰서를 함께 보여주는 유니폼 디자인까지 한 눈에 볼 수 있는 직접적인 인터페이스를 제공합니다.</h4>
                     </div>
                 </div>
             </div>
@@ -143,10 +144,15 @@
         <section id="contact">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>Promise</h2>
+                    <div class="col-lg-12">
+                        <h1>Simple</h1>
                         <br>
-                        <p class="lead">스포츠팀의 굿즈는 접근성이 낮고 배송 문제에 관련하여 복잡했다고 느꼈던 고객들님의 부정적 경험을 바탕으로, 스포츠 구단의 굿즈들이 잘 정리 되어 있는 국내 사이트의 필요성을 충족시켜드리기 위해 만들어진 사이트 입니다. 그렇기 때문에 고객님들의 불편함을 최소화 시켜드리고 저렴한 가격과 고객님들이 느끼는 문제점을 빠르게 해결하도록 노력하는 Marick가 되겠습니다.</p>
+                        <h4 class="lead">구단의 MD샵에서 구매했던 번거로움을 제거했습니다.</h4>
+
+                        <h4 class="lead">낮은 접근성, 복잡한 배송과 관련하여 느낀 고객의 부정적 경험을 제거해 간편한 경험을 제공합니다.</h4>
+
+                        <h4 class="lead">Marick에서는 여러 구단의 유니폼을 구매해도 한번의 배송비로 고객님들께 전달합니다.</h4>
+
                     </div>
                 </div>
             </div>
@@ -203,7 +209,6 @@
         </footer>
 
         <!-- Bootstrap core JS-->
-               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>

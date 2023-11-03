@@ -9,5 +9,5 @@ def index(request):
 def company(request):
     return render(
         request,
-        'single_pages/company1.html'
+        'single_pages/company.html'
     )

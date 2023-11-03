@@ -22,4 +22,5 @@ urlpatterns = [
     path('notice/', include('notice.urls')),
     path('', include('single_pages.urls')),
 
+
 ]
