@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>notice</title>
-    <link rel="stylesheet" href="css/css.css">
-    <link href="./css/marick.css" rel="stylesheet" type="text/css">
-    <link href="./css/bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'notice/css/css.css' %}">
+    <link href="{% static 'notice/css/marick.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'notice/bootstrap/bootstrap.min.css' %}" type="text/css">
     <script src="https://kit.fontawesome.com/2dc05c0136.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -38,8 +39,8 @@
                     </button>
 
                     <form class="form-inline my-2 my-lg-0">
-                        <a href="./searchingpage.html"><input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search"></a>
-                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+                        <a class="btn btn-outline-dark my-2 my-sm-0" type="submit" href="./searchingpage.html" role="button"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </form>
                 </nav>
             </div>

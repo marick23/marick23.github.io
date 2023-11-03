@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>marick</title>
-    <link href="./css/marick.css" rel="stylesheet" type="text/css">
-    <link href="./css/bootstrap4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'single_pages/css/marick.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'single_pages/bootstrap/bootstrap.min.css' %}" type="text/css">
     <script src="https://kit.fontawesome.com/2dc05c0136.js" crossorigin="anonymous"></script>
 
 </head>
@@ -38,8 +39,8 @@
                 </button>
 
                 <form class="form-inline my-2 my-lg-0">
-                    <a href="./searchingpage.html"><input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search"></a>
-                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+                    <a class="btn btn-outline-dark my-2 my-sm-0" type="submit" href="./searchingpage.html" role="button"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </form>
             </nav>
         </div>
