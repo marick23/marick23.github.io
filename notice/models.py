@@ -4,8 +4,8 @@ class Notice(models.Model):
     title = models.CharField(max_length=50)
     cont = models.TextField()
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
 
     #author : 추후 작성 예정
 
