@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86b56f18-1251-499d-9a3c-e250d9f3423a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notice/static/notice/image/로고.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/css/head.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/image/로고.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OOTD/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OOTD/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/models.py" afterDir="false" />
@@ -17,23 +12,71 @@
       <change beforePath="$PROJECT_DIR$/OOTD/templates/OOTD/OOTD_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/templates/OOTD/OOTD_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OOTD/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doitdjango_prj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/doitdjango_prj/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doitdjango_prj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doitdjango_prj/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/event/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notice/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/notice/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notice/templates/notice/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notice/templates/notice/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/notice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notice/templates/notice/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product_detail/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product_detail/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product_detail/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/company.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/company.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/event/Event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/event/Event_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/event/Event_detail_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/event/Event_detail_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/event/Event_detail_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/KFA_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/busan_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/daegu_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/dajeon_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/gwanggu_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/gwangwon_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/incheon_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/jeonbuk_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/pohang_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/product(2)_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/product_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/searchingpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/seoul_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/suwon_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/suwonfc_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/ulsan_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_busan_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_busan_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_daegu_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_daegu_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_daejeon_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_gwanggu_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_gwanggu_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_gwangwon_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_gwangwon_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_incheon_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_incheon_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_jeonbuk_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_jeonbuk_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_kfa_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_kfa_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_pohang_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_pohang_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_seoul_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_seoul_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_suwon_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_suwon_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_suwonfc_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_suwonfc_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_ulsan_away.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/templates/product_detail/product_ulsan_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +86,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -69,7 +112,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/rkdus/github/marick23.github.io/single_pages/static/single_pages",
+    "last_opened_file_path": "C:/Users/rkdus/git/marick23.github.io - 복사본",
     "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
