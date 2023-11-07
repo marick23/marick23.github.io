@@ -20,7 +20,7 @@
                     <div>
                         <div class="num">{{ p.pk }}</div>
                         <div class="title">
-                            <a href="view.html">{{ p.title }}</a>
+                            <a href="{{ p.get_absolute_url }}">{{ p.title }}</a>
                         </div>
 <!--                        <div class="writer">김아름</div>-->
                         <div class="date">{{ p.created_at|date:'Y-m-d' }}</div>

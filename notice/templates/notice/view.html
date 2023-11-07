@@ -29,8 +29,30 @@
 <!--                        </dl>-->
                     </div>
                     <div class="cont">
-                        {{ notice.cont }}
+                        {% if notice.head_image %}
+                            <img src="{{ notice.head_image.url }}" class="img-fluid" alt="{{ notice }} head image">
+                            <br>
+                            {{ notice.cont }}
+                        {% endif %}
                     </div>
+
+                    {% if notice.file_upload %}
+                    <a href="{{ notice.file_upload.url }}" role="button" class="btn btn-outline-dark" download>
+                      Download:
+                      {% if post.get_file_ext == 'docx' or post.get_file_ext == 'doc' %}
+                      <i class="fa-solid fa-file-word"></i>
+                      {% elif post.get_file_ext == 'xlsx' or post.get_file_ext == 'xls' %}
+                      <i class="fa-solid fa-file-excel"></i>
+                      {% elif post.get_file_ext == 'csv' %}
+                      <i class="fa-solid fa-file-csv"></i>
+                      {% elif post.get_file_ext == 'pdf' %}
+                      <i class="fa-solid fa-file-pdf"></i>
+                      {% else %}
+                      <i class="fa-solid fa-file"></i>
+                      {% endif %}
+                      {{ notice.get_file_name }}
+                    </a>
+                    {% endif %}
                 </div>
                 <div class="bt_wrap">
                     <a href="/notice/" class="on">목록</a>
