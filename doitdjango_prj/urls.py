@@ -25,9 +25,9 @@ urlpatterns = [
     path('notice/', include('notice.urls')),
     path('', include('single_pages.urls')),
     # path('OOTD/', include('OOTD.urls')),
-    # path('Event/', include('event.urls')),
-    # path('Product/', include('product.urls')),
-    # path('Detail/', include('product_detail.urls')),
+    path('Event/', include('event.urls')),
+    # path('KFA/', include('KFA.urls')),
+    # path('KLEAGUE/', include('KLEAGUE.urls')),
 
 ]
 
