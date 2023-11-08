@@ -1,0 +1,23 @@
+/* CSS 스타일 */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 383px; /* 가로 크기를 250px로 설정 */
+  height: 383px; /* 세로 크기를 200px로 설정 */
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+
+.card.left {
+  margin-right: 10px;
+}
+
+.card.right {
+  margin-left: 10px;
+}
+

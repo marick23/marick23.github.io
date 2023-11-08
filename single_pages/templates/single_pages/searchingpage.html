@@ -1,0 +1,65 @@
+{% extends 'single_pages/base.html' %}
+
+{% block css %}
+{% load static %}
+    <link href="{% static 'single_pages/css/marick.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'single_pages/css/head.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main_area %}
+    <div style="text-align: right; margin-top: 20px;">
+        <ul style="list-style: none; padding: 0; display: flex; align-items: center; justify-content: flex-end;">
+            <li style="margin-right: 10px;"><a href="index.html">홈</a></li>
+            <li title="현재 위치" style="margin-right: 30px;"><strong> -> 상품검색</strong></li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">수원</h1>
+        </div>
+    </div>
+
+    <main class="mt-4">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-1g-9 col-md-12">
+                    <div class="card-deck">
+                        <div class="card mt-4">
+                            <img src="./image/유니폼/수원삼성 23 홈.png" class="img-fluid" style="width: 350px;">
+                            <div class="card-body">
+                                <h5 class="card-title">수원삼성블루윙즈</h5>
+                                <p><a href="product_suwon_home.html" class="text-primary">23시즌 홈 유니폼</a></p>
+                                <p class="card-text text-right">99,000원</p>
+                            </div>
+                        </div>
+                        <div class="card mt-4">
+                            <img src="./image/유니폼/수원삼성 23 원정.png" class="img-fluid" style="width: 350px;">
+                            <div class="card-body">
+                                <h5 class="card-title">수원삼성블루윙즈</h5>
+                                <p><a href="product_suwon_away.html" class="text-primary">23시즌 원정 유니폼</a></p>
+                                <p class="card-text text-right">99,000원</p>
+                            </div>
+                        </div>
+                        <div class="card mt-4">
+                            <img src="./image/유니폼/수엪_홈.png" class="img-fluid" style="width: 350px;">
+                            <div class="card-body">
+                                <h5 class="card-title">수원FC</h5>
+                                <p><a href="product_suwonfc_home.html" class="text-primary">23시즌 홈 유니폼</a></p>
+                                <p class="card-text text-right">89,000원</p>
+                            </div>
+                        </div>
+                        <div class="card mt-4">
+                            <img src="./image/유니폼/수엪_원정.png" class="img-fluid" style="width: 350px;">
+                            <div class="card-body">
+                                <h5 class="card-title">수원FC</h5>
+                                <p><a href="product_suwonfc_away.html" class="text-primary">23시즌 원정 유니폼</a></p>
+                                <p class="card-text text-right">89,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

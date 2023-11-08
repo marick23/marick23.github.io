@@ -1,29 +1,28 @@
 {% extends 'event/base.html' %}
 
+{% block css %}
+{% load static %}
+    <link href="{% static 'event/css/css.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
 {% block main_area %}
 
-{% for p in events %}
-     <div class="mt-4">
-        <div class="container">
-            <div class="row>">
-                <div class="row row-cols-1 row-cols-md-2">
-                  <main class="col mb-4 float=right">
-                    <div class="card">
-                      {% if p.head_image %}
-                      <img src="{{ p.head_image.url }}" class="card-img-top" alt="{{ p }} head image">
-                      {% endif %}
-                      <div class="card-body">
-                        <h5 class="card-title">{{ p.title }}</h5>
-                        <p class="card-text">{{ p.content }}</p>
-                        <a href="{{ p.get_absolute_url }}" class="btn btn-outline-dark">자세히 보기</a>
-                      </div>
-                    </div>
-                  </main>
+     <div class="mt-2">
+        <div class="card-container">
+            {% for p in events %}
+                <div class="card {% if forloop.counter0|divisibleby:2 %}left{% else %}right{% endif %}">
+                  {% if p.head_image %}
+                  <img src="{{ p.head_image.url }}" class="card-img-top" alt="{{ p }} head image">
+                  {% endif %}
+                  <div class="card-body">
+                    <h5 class="card-title">{{ p.title }}</h5>
+                    <p class="card-text">{{ p.content }}</p>
+                    <a href="{{ p.get_absolute_url }}" class="btn btn-outline-dark">자세히 보기</a>
+                  </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
-{% endfor %}
 
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center mt-5">

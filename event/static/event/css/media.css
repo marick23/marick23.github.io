@@ -1,0 +1,5 @@
+@media {
+  .card {
+    width: calc(50% - 10px);
+  }
+}
