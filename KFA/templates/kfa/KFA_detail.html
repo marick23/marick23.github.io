@@ -1,0 +1,140 @@
+{% extends 'kfa/base.html' %}
+
+    {% block main_area %}
+
+          <main class="mt-4">
+              <div class="container">
+                  <div class="row>">
+                      <div class="col-md-5">
+                          {% if kfa.head_image %}
+                            <img src="{{ kfa.head_image.url }}" class="rounded float-left" style="width: 450px;" alt="Responsive image">
+                          {% endif %}
+                      </div>
+                  </div>
+                      <div class="col-md-12">
+                          <div class="card rounded shadow-sm">
+                              <div class="card-body">
+                                <h4 class="card-title">{{ kfa.title }}</h4>
+                                  <h4>{{ kfa.base_price|floatformat:"-2" }}원</h4>
+                                <h4 class="card-subtitle mb-2">{{ kfa.content }}</h4>
+                                <div class="col-md-9">
+                                  <label for="validationCustom04">사이즈 선택</label>
+                                  <select class="custom-select custom-select-center" id="validationCustom04" required>
+                                    <option selected disabled value="">사이즈 선택</option>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                    <option>XXXL</option>
+                                    <option>XXXXL</option>
+                                  </select>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="col-md-9">
+                                    <label for="validationCustom04">마킹 선택</label>
+                                        <h6>번호.마킹: + {{ kfa.option_price|floatformat:"-2" }}</h6>
+                                        <!-- 옵션 선택 폼 -->
+                                        <form method="GET">
+                                            <select name="selected_option">
+                                                <option value="option">1.김승규</option>
+                                                <option value="option2">4. 김민재</option>
+                                                <option value="option3">5. 김영권</option>
+                                                <option value="option4">6. 김태환</option>
+                                                <option value="option5">7. 손흥민</option>
+                                                <option value="option6">9. 박용우</option>
+                                                <option value="option7">10. 이재성</option>
+                                                <option value="option8">11. 이강인</option>
+                                                <option value="option9">14. 황인범</option>
+                                                <option value="option10">15. 오현규</option>
+                                                <option value="option11">16. 황의조</option>
+                                                <option value="option12">23. 이기제</option>
+                                                <option value="no_option">옵션없음</option>
+                                            </select>
+                                            <button type="submit" class="btn btn-primary">적용</button>
+                                        </form>
+
+                                        <p>Option Price: {{ kfa.option_price }}</p>
+                                        <p>base Price: {{ kfa.base_price }}</p>
+
+                                        <p>Total Price: {{ kfa.total_price }}</p>
+
+                                    </div>
+                                </div>
+                                <div class="row pt-3 pb-3">
+                                    <div class="col-12">
+                                      <button type="button" class="btn btn-secondary btn-lg btn-block btn-right">장바구니 담기</button>
+                                      <button type="button" class="btn btn-dark btn-lg btn-block">구매하기</button>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  <nav>
+                      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">상세정보</a>
+                        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Review</a>
+                        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Q&A</a>
+                      </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active mt-5" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                          <img src="./image/상세이미지/kfa/kfa 상세.jpg" class="img-fluid" style="width: 1200px;" alt="Responsive image">
+                      </div>
+                      <div class="tab-pane fade mt-5" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                          <div class="card-group">
+                          <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">리뷰 작성란</h5>
+                              <p class="card-text">리뷰예시입니다. 작성란입니다.</p>
+                            </div>
+                            <div class="card-footer">
+                              <small class="text-muted">작성자: 강*동</small>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">리뷰 작성란</h5>
+                              <p class="card-text">리뷰 예시입니다. 리뷰 작성란입니다.</p>
+                            </div>
+                            <div class="card-footer">
+                              <small class="text-muted">작성자: 김*별</small>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">리뷰 작성란</h5>
+                              <p class="card-text">리뷰 작성란 입니다. 예시입니다.</p>
+                            </div>
+                            <div class="card-footer">
+                              <small class="text-muted">작성자: 한*정</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                          <div class="media mt-5">
+                                  <img src="./image/이미지/예시.png" style="width: 50px;" class="mr-3" alt="...">
+                                  <div class="media-body">
+                                    <h5 class="mt-0">Q&A 예시입니다.</h5>
+                                    재입고는 언제쯤 가능할까요?
+
+                                    <div class="media mt-3">
+                                      <a class="mr-3" href="#">
+                                        <img src="./image/이미지/예시.png" style="width: 50px;" class="mr-3" alt="...">
+                                      </a>
+                                      <div class="media-body">
+                                        <h5 class="mt-0">답변예시입니다.</h5>
+                                        올해 재입고는 없을 예정입니다.
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </main>
+    {% endblock %}

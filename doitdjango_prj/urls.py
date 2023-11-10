@@ -28,9 +28,8 @@ urlpatterns = [
     path('Event/', include('event.urls')),
     path('login/', include('login.urls')),
     path('mypage/', include('mypage.urls')),
-    # path('KFA/', include('KFA.urls')),
+    path('KFA/', include('KFA.urls')),
     # path('KLEAGUE/', include('KLEAGUE.urls')),
-
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
