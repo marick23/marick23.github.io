@@ -1,13 +1,18 @@
 {% extends 'KLEAGUE/base.html' %}
 
+{% block css %}
+{% load static %}
+    <link href="{% static 'KLEAGUE/css/card.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
 {% block main_area %}
 
-    {% for p in kleagues %}
       <div class="mt-5">
           <div class="container">
-              <div class="row">
+              <div class="card-container">
+                  {% for p in kleagues %}
                   <div class="col-md-6">
-                      <div class="card">
+                      <div class="card {% if forloop.counter0|divisibleby:2 %}left{% else %}right{% endif %}">
                         {% if p.head_image %}
                             <img src="{{ p.head_image.url }}" class="img-fluid">
                         {% endif %}
@@ -21,24 +26,9 @@
                         </div>
                       </div>
                   </div>
-                  <div class="col-md-6">
-                      <div class="card">
-                        {% if p.head_image %}
-                            <img src="{{ p.head_image.url }}" class="img-fluid">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
-                            {% if p.hook_text %}
-                            <h5 class="text-muted">{{ p.hook_text }}</h5>
-                            {% endif %}
-                            <p><a href="#" class="text-primary">{{ p.content | truncatewords:10 }}</a></p>
-                            <p class="card-text text-right">109,000원</p>
-                        </div>
-                      </div>
-                  </div>
+                  {% endfor %}
               </div>
           </div>
       </div>
-    {% endfor %}
 
 {% endblock %}

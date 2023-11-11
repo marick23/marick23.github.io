@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86b56f18-1251-499d-9a3c-e250d9f3423a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/css/card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KFA/static/KFA/css/card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KLEAGUE/static/KLEAGUE/css/card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/templates/KFA/KFA_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/KFA/KFA_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/templates/KFA/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/KFA/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/KLEAGUE_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/KLEAGUE_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/static/single_pages/css/marick.css" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/static/single_pages/css/marick.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +49,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/rkdus/github/marick23.github.io/single_pages/static/single_pages/css",
+    "last_opened_file_path": "C:/Users/rkdus/github/marick23.github.io/KLEAGUE/static/KLEAGUE/css",
     "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rkdus\github\marick23.github.io\KLEAGUE\static\KLEAGUE\css" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\KFA\static\kfa\css" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\single_pages\static\single_pages\css" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\event\templates\event" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\notice\templates\notice" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\single_pages\templates\single_pages" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\mypage\templates\mypage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rkdus\github\marick23.github.io\notice\static\notice\css" />
