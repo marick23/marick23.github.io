@@ -29,6 +29,8 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('mypage/', include('mypage.urls')),
     path('KFA/', include('KFA.urls')),
+    # path('cart/', include('cart.urls')),
+    # path('payment/', include('payment.urls')),
     # path('KLEAGUE/', include('KLEAGUE.urls')),
 ]
 
