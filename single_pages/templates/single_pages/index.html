@@ -4,13 +4,14 @@
 {% load static %}
     <link href="{% static 'single_pages/css/marick.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'single_pages/css/head.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'single_pages/css/card.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block main_area %}
 
   <figure>
-    <div class="container pt-5">
-        <div class="card">
+    <div class="container pt-5 text-center">
+        <div class="card1">
           <ol class="carousel-indicators">
             <li data-target="#event_{{ event.id }}" data-slide-to="0"></li>
             <li data-target="#event_{{ event.id }}" data-slide-to="1"></li>
@@ -20,7 +21,7 @@
             <div class="carousel-inner">
               {% for p in events|slice:":3" %}
               <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
-                <a href="{{ p.get_absolute_url }}"><img src="{{ p.head_image.url }}" class="card-img-top" alt=""></a>
+                <a href="{{ p.get_absolute_url }}"><img src="{{ p.head_image.url }}" class="card-img-top mx-auto d-block" style="max-width: 1050px; height: auto;" alt=""></a>
               </div>
               {% endfor %}
             </div>
@@ -42,66 +43,38 @@
 
   <section>
     <!-- 베스트상품 -->
-    <div class="container pt-5">
-      <h3 class="text-center">BEST ITEM</h3>
-        <div class="card-group mt-3">
-          <div class="card">
-            <img src="./image/유니폼/kfa 22-24 홈.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">KFA</h4>
-              <p><a href="product_kfa_home.html" class="text-primary">22-24시즌 홈 유니폼</a></p>
-              <p class="text-right">89,000원</small></p>
+      <div class="container pt-5">
+        <h3 class="text-center">BEST ITEM</h3>
+          <div class="card-container mt-3">
+            {% for p in KLEAGUES %}
+            {% if forloop.revcounter <= 3 %}
+            <div class="cards">
+              <img src="{{ p.head_image.url }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
+                <p class="text-right">99,000원</small></p>
+              </div>
             </div>
+            {% endif %}
+            {% endfor %}
           </div>
-          <div class="card">
-            <img src="./image/유니폼/수원삼성 23 홈.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">수원삼성</h4>
-              <p><a href="product_suwon_home.html" class="text-primary">23시즌 홈 유니폼</a></p>
-              <p class="text-right">99,000원</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./image/유니폼/포항 스틸러스 23홈.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">포항스틸러스</h4>
-              <p><a href="product_pohang_home.html" class="text-primary">23시즌 홈 유니폼</a></p>
-              <p class="text-right">99,000원</small></p>
-            </div>
-          </div>
-        </div>
-    </div>
+      </div>
 
     <!-- 신상품 -->
-    <div class="container pt-5">
-      <h3 class="row ml-3">NEW ARRIVAL</h3>
-        <div class="card-group mt-3">
-          <div class="card">
-            <img src="./image/유니폼/울산현대 24 홈.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">울산현대</h4>
-              <p><a href="product_ulsan_home.html" class="text-primary">24시즌 홈 유니폼</a></p>
-              <p class="text-right">99,000원</small></p>
+      <div class="container pt-5">
+        <h3 class="row ml-3">NEW ARRIVAL</h3>
+          <div class="card-container mt-3">
+            {% for p in KLEAGUES|slice:":3" %}
+            <div class="cards">
+              <img src="{{ p.head_image.url }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
+                <p class="text-right">99,000원</small></p>
+              </div>
             </div>
+            {% endfor %}
           </div>
-          <div class="card">
-            <img src="./image/유니폼/수원삼성 23 원정.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">수원삼성</h4>
-              <p><a href="product_suwon_away.html" class="text-primary">23시즌 원정 유니폼</a></p>
-              <p class="text-right">99,000원</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./image/유니폼/전북현대 23 홈.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title">전북현대</h4>
-              <p><a href="product_jeonbuk_home.html" class="text-primary">23시즌 홈 유니폼</a></p>
-              <p class="text-right">99,000원</small></p>
-            </div>
-          </div>
-        </div>
-    </div>
+      </div>
   </section>
 
 
