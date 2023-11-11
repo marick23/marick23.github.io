@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86b56f18-1251-499d-9a3c-e250d9f3423a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/event/templates/event/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/templates/login/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/templates/login/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mypage/templates/mypage/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mypage/templates/mypage/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notice/templates/notice/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notice/templates/notice/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/searchingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/favicon2.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/scripts.company.js" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/static/single_pages/js/scripts.company.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/static/mypage/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/templates/login/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/templates/login/memberjoin.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/memberjoin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mypage/templates/mypage/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/templates/mypage/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notice/templates/notice/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/company.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/company.html" afterDir="false" />
-    </list>
+    <list default="true" id="86b56f18-1251-499d-9a3c-e250d9f3423a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
