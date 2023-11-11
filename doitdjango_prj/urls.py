@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('notice/', include('notice.urls')),
     path('', include('single_pages.urls')),
-    # path('OOTD/', include('OOTD.urls')),
+    path('OOTD/', include('OOTD.urls')),
     path('Event/', include('event.urls')),
     path('login/', include('login.urls')),
     path('mypage/', include('mypage.urls')),
