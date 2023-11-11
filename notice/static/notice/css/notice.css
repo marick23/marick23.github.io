@@ -37,8 +37,6 @@ dt {
     text-align: center;
     font-size: 0px;
     text-align: center;
-    /* 버튼 사이의 여백 제거
-    text-align:center -> 버튼도 가운데. 버튼 안의 글씨도 가운데 */
 }
 .bt_wrap a {
     display: inline-block;

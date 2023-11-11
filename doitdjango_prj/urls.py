@@ -31,7 +31,7 @@ urlpatterns = [
     path('KFA/', include('KFA.urls')),
     # path('cart/', include('cart.urls')),
     # path('payment/', include('payment.urls')),
-    # path('KLEAGUE/', include('KLEAGUE.urls')),
+    path('KLEAGUE/', include('KLEAGUE.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

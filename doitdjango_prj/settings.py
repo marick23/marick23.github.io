@@ -46,8 +46,7 @@ INSTALLED_APPS = [
     'mypage',
     'OOTD',
     'payment',
-    'product',
-    'product_detail',
+    'KLEAGUE',
     'KFA',
 ]
 

@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86b56f18-1251-499d-9a3c-e250d9f3423a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/KLEAGUE/static/KLEAGUE/css/marick.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/KFA_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/kfa/KFA_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/KFA_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/kfa/KFA_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KFA/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KFA/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/1배너.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/1배너_M84Jcta.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/1배너_ZusMQsX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/2배너.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/2배너_9l3Ctah.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/3배너.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/3배너_eIl9Ka8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/울산_공지사항_안내.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/울산_공지사항_안내_O52zduK.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/울산_공지사항_안내_fZtZzAC.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_media/event/imges/2023/11/08/울산_공지사항_안내_kz0NPws.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doitdjango_prj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/doitdjango_prj/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doitdjango_prj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doitdjango_prj/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,24 +43,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rkdus/github/marick23.github.io/KFA/static/kfa&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/rkdus/Desktop/KLEAGUE",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rkdus\github\marick23.github.io\KLEAGUE\static\KLEAGUE\css" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\KFA\static\kfa" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\single_pages\templates\single_pages" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\login\static\login" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\mypage\static\mypage" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\event\static\event" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rkdus\github\marick23.github.io\notice\static\notice\css" />
