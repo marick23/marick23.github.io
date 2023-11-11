@@ -19,16 +19,19 @@
                                 <h4 class="card-subtitle mb-2">{{ kfa.content }}</h4>
                                 <div class="col-md-9">
                                   <label for="validationCustom04">사이즈 선택</label>
-                                  <select class="custom-select custom-select-center" id="validationCustom04" required>
-                                    <option selected disabled value="">사이즈 선택</option>
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                    <option>XXL</option>
-                                    <option>XXXL</option>
-                                    <option>XXXXL</option>
-                                  </select>
+                                  <form method="GET">
+                                      <select name="size_option">
+                                        <option selected disabled value="">사이즈 선택</option>
+                                        <option value="option1">S</option>
+                                        <option value="option2">M</option>
+                                        <option value="option3">L</option>
+                                        <option value="option4">XL</option>
+                                        <option value="option5">XXL</option>
+                                        <option value="option6">XXXL</option>
+                                        <option value="option7">XXXXL</option>
+                                      </select>
+                                      <button type="submit" class="btn btn-primary">적용</button>
+                                  </form>
                                 </div>
                                 <div class="mt-4">
                                     <div class="col-md-9">
@@ -54,10 +57,10 @@
                                             <button type="submit" class="btn btn-primary">적용</button>
                                         </form>
 
-                                        <p>Option Price: {{ kfa.option_price }}</p>
-                                        <p>base Price: {{ kfa.base_price }}</p>
+                                        <p>Option Price: {{ kfa.option_price|floatformat:"-2" }}</p>
+                                        <p>base Price: {{ kfa.base_price|floatformat:"-2" }}</p>
 
-                                        <p>Total Price: {{ total_price }}</p>
+                                        <h4>총 상품 금액: {{ total_price|floatformat:"-2" }}원</h4>
 
                                     </div>
                                 </div>

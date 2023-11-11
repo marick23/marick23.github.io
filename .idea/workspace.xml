@@ -5,14 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86b56f18-1251-499d-9a3c-e250d9f3423a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/KLEAGUE/static/KLEAGUE/css/marick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KFA/static/KFA/css/marick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KLEAGUE/static/image/로고.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/KFA_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/kfa/KFA_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KFA/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/static/kfa/bootstrap/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/static/KFA/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/static/kfa/bootstrap/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/static/KFA/bootstrap/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/static/kfa/css/marick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/static/kfa/image/로고.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/static/KFA/image/로고.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/KFA_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/KFA/KFA_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/KFA_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/KFA/KFA_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/KFA/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/KFA/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/KFA/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KFA/templates/kfa/searchingpage.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KFA/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/static/kfa/bootstrap/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/static/kfa/bootstrap/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/static/kfa/css/marick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doitdjango_prj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/doitdjango_prj/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doitdjango_prj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doitdjango_prj/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/event/Event.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/Event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/templates/event/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/templates/login/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notice/templates/notice/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,24 +59,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/rkdus/Desktop/KLEAGUE",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rkdus/github/marick23.github.io/KFA/static/KFA&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rkdus\github\marick23.github.io\KFA\static\KFA" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\KLEAGUE\static" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\KLEAGUE\static\KLEAGUE\css" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\KFA\static\kfa" />
       <recent name="C:\Users\rkdus\github\marick23.github.io\single_pages\templates\single_pages" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\login\static\login" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\mypage\static\mypage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rkdus\github\marick23.github.io\notice\static\notice\css" />

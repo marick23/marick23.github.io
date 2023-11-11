@@ -14,7 +14,7 @@ def index(request):
 def KFA_detail(request, kfa_id):
     kfa = KFA.objects.get(id=kfa_id)
     selected_option = request.GET.get('selected_option')  # 옵션 선택 여부를 가져옴
-
+    size_option = request.GET.get('size_option')
     if selected_option == "no_option":
         # "옵션 없음"을 선택한 경우, 옵션 가격을 0으로 설정
         kfa.option_price = 0
@@ -32,6 +32,7 @@ def KFA_detail(request, kfa_id):
     context = {
         'kfa': kfa,
         'total_price': total_price,
+        'size_option' : size_option,
         'selected_option': selected_option,
     }
     return render(request, 'KFA/KFA_detail.html', context)
