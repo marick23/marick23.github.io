@@ -5,21 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86b56f18-1251-499d-9a3c-e250d9f3423a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OOTD/static/image/로고.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event/templates/event/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/templates/login/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/templates/login/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mypage/templates/mypage/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mypage/templates/mypage/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notice/templates/notice/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notice/templates/notice/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KFA/templates/KFA/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/KFA/templates/KFA/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/static/OOTD/bootstrap/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/static/OOTD/bootstrap/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/static/OOTD/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/static/OOTD/css/styles.ootd.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/templates/OOTD/OOTD.html" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/templates/OOTD/OOTD.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/templates/OOTD/OOTD_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/templates/OOTD/OOTD_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOTD/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOTD/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KLEAGUE/templates/KLEAGUE/searchingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/templates/event/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/favicon2.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doitdjango_prj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doitdjango_prj/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/scripts.company.js" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/static/single_pages/js/scripts.company.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/static/mypage/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/templates/login/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/templates/login/memberjoin.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/memberjoin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mypage/templates/mypage/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/templates/mypage/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notice/templates/notice/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/notice/templates/notice/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/company.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/company.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +65,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/rkdus/github/marick23.github.io/OOTD/static",
+    "last_opened_file_path": "C:/Users/rkdus/github/marick23.github.io/event/templates/event",
     "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rkdus\github\marick23.github.io\OOTD\static\OOTD" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\KLEAGUE\static\KLEAGUE" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\OOTD\static" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\KFA\static\KFA" />
-      <recent name="C:\Users\rkdus\github\marick23.github.io\KLEAGUE\static" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\event\templates\event" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\notice\templates\notice" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\single_pages\templates\single_pages" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\mypage\templates\mypage" />
+      <recent name="C:\Users\rkdus\github\marick23.github.io\login\templates\login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rkdus\github\marick23.github.io\notice\static\notice\css" />
