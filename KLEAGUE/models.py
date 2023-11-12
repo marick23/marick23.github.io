@@ -2,8 +2,8 @@ from django.db import models
 
 class KLEAGUE(models.Model):
     objects = None
+    league_name = models.CharField(max_length=50, blank=True)
     title = models.CharField(max_length=50)
-    hook_text = models.CharField(max_length=100, blank=True)
     cont = models.TextField()
     name = models.CharField(max_length=100, default=0.0)
     base_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)

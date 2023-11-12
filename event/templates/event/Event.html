@@ -12,7 +12,7 @@
             {% for p in events %}
                 <div class="card {% if forloop.counter0|divisibleby:2 %}left{% else %}right{% endif %}">
                   {% if p.head_image %}
-                  <img src="{{ p.head_image.url }}" class="card-img-top" style="width: 558px;" alt="{{ p }} head image">
+                  <img src="{{ p.head_image.url }}" class="card-img-top" alt="{{ p }} head image">
                   {% endif %}
                   <div class="card-body">
                     <h5 class="card-title">{{ p.title }}</h5>

@@ -487,7 +487,11 @@ progress {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 25px;
+  font-weight: 300;
+}
+.read {
+  font-size: 20px;
   font-weight: 300;
 }
 

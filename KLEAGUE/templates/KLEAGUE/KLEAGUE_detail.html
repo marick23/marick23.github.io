@@ -14,7 +14,7 @@
                       <div class="col-md-12">
                           <div class="card rounded shadow-sm">
                               <div class="card-body">
-                                <h4 class="card-title">{{ kleague.title }}</h4>
+                                <h4 class="card-title">{{ kleague.league_name }}<br>{{ kleague.title }}</h4>
                                   <h4>{{ kleague.base_price|floatformat:"-2" }}원</h4>
                                 <h4 class="card-subtitle mb-2">{{ kleague.content }}</h4>
                                 <div class="col-md-9">
@@ -36,7 +36,7 @@
                                 <div class="mt-4">
                                     <div class="col-md-9">
                                     <label for="validationCustom04">마킹 선택</label>
-                                        <h6>번호.마킹: + {{ kleague.option_price|floatformat:"-2" }}</h6>
+<!--                                        <h6>번호.마킹: + {{ kleague.option_price|floatformat:"-2" }}</h6>-->
                                         <!-- 옵션 선택 폼 -->
                                         <form method="GET">
                                             <select name="selected_option">

@@ -1,63 +1,54 @@
 {% extends 'OOTD/base.html' %}
 
-    {% block main_area %}
+{% block css %}
+{% load static %}
+    <link href="{% static 'OOTD/css/card.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
-                {% for p in ootds %}
-                    <main class="mt-10">
-                      <div class="container">
-                          <div class="row>">
-                            <div class="card-deck">
-                              <div class="card mt-4">
-                                <img src="{{ p.head_image.url }}" class="img-fluid rounded" alt="..." style="max-width: 100%">
-                                <div class="badge badge-pill bg-warning text-white position-absolute" style="top: 0.5rem; right: 0.5rem; font-size: 20px;">Best</div>
-                                <div class="card-body">
-                                  <h5 class="card-title">{{ p.created_at }}</h5>
-                                  <p class="card-text">{{ p.title }}</p>
-                                  <p class="card-text"><small class="text-muted">작성자 개발 예정</small></p>
-                                  <p><a href="{{ p.get_absolute_url }}" class="text-primary">더보기</a></p>
-                                </div>
-                              </div>
-                              <div class="card mt-4">
-                                <img src="{{ p.head_image.url }}" class="img-fluid rounded" alt="..." style="max-width: 100%">
-                                <div class="card-body">
-                                  <h5 class="card-title">{{ p.created_at }}</h5>
-                                  <p class="card-text">{{ p.title }}</p>
-                                  <p class="card-text"><small class="text-muted">작성자 개발 예정</small></p>
-                                  <p><a href="{{ p.get_absolute_url }}" class="text-primary">더보기</a></p>
-                                </div>
-                              </div>
-                              <div class="card mt-4">
-                                <img src="{{ p.head_image.url }}" class="img-fluid rounded" alt="..." style="max-width: 100%">
-                                <div class="card-body">
-                                  <h5 class="card-title">{{ p.created_at }}</h5>
-                                  <p class="card-text">{{ p.title }}</p>
-                                  <p class="card-text"><small class="text-muted">작성자 개발 예정</small></p>
-                                  <p><a href="{{ p.get_absolute_url }}" class="text-primary">더보기</a></p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </main>
-                {% endfor %}
+{% block main_area %}
 
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center mt-5">
-              <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-              </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="">1</a></li>
-              <li class="page-item"><a class="page-link" href="">2</a></li>
-              <li class="page-item"><a class="page-link" href="">3</a></li>
-              <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-              </a>
-              </li>
-          </ul>
-        </nav>
 
-    {% endblock %}
+    <main class="mt-10">
+      <div class="container">
+          <div class="row>">
+            <div class="card-deck">
+              {% for p in ootds %}
+              {% if forloop.revcounter <= 3 %}
+              <div class="card">
+                <img src="{{ p.head_image.url }}" class="img-fluid rounded" alt="..." style="max-width: 100%">
+                <div class="badge badge-pill bg-warning text-white position-absolute" style="top: 0.5rem; right: 0.5rem; font-size: 20px;">Best</div>
+                <div class="card-body">
+                  <h5 class="card-title">{{ p.created_at|date:'m/d' }}</h5>
+                  <p class="card-text">{{ p.title }}</p>
+                  <p class="card-text"><small class="text-muted">작성자 개발 예정</small></p>
+                  <p><a href="{{ p.get_absolute_url }}" class="text-primary">더보기</a></p>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center mt-5">
+          <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+          </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="">1</a></li>
+          <li class="page-item"><a class="page-link" href="">2</a></li>
+          <li class="page-item"><a class="page-link" href="">3</a></li>
+          <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+          </a>
+          </li>
+      </ul>
+    </nav>
+
+{% endblock %}

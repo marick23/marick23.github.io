@@ -24,3 +24,4 @@ def OOTD_detail(request, pk):
             'ootd': ootd
         }
     )
+

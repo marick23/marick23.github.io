@@ -14,8 +14,8 @@
 }
 
 .card {
-  min-width: 500px; /* 카드의 최소 너비를 설정 */
-  width: 48%; /* 두 개의 카드가 동일한 줄에 나열되도록 48% 너비 설정 */
+  min-width: 240px; /* 카드의 최소 너비를 설정 */
+  width: 24%; /* 두 개의 카드가 동일한 줄에 나열되도록 48% 너비 설정 */
   margin-left: auto; /* 왼쪽 여백을 자동으로 설정하여 센터 정렬 */
   margin-right: auto; /* 오른쪽 여백도 자동으로 설정하여 센터 정렬 */
   margin-bottom: 25px;
@@ -24,9 +24,13 @@
   /* 나머지 스타일 속성을 필요에 따라 추가 및 조정할 수 있습니다. */
 }
 .card-img-top {
-  width: 400px; /* 이미지의 가로 크기를 500px로 설정 */
-  height: 400px; /* 이미지의 세로 크기를 500px로 설정 */
+  width: 50px; /* 이미지의 가로 크기를 500px로 설정 */
+  height: 50px; /* 이미지의 세로 크기를 500px로 설정 */
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.read {
+  font-size: 17px auto;
+  font-weight: 300;
 }

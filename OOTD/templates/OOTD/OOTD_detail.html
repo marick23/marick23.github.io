@@ -1,143 +1,150 @@
 {% extends 'OOTD/base.html' %}
 
-    {% block main_area %}
+{% block css %}
+{% load static %}
+    <link href="{% static 'OOTD/css/cards.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
-     <!-- Product section-->
-        <section class="py-5">
+{% block main_area %}
+
+    <!-- Product section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                    {% if ootd.head_image %}
+                    <div class="col-md-6">
+                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 500px;" alt="Responsive image">
+                    </div>
+                    {% endif %}
+                <div class="col-md-6">
+                    <div class="small mb-1">작성자 개발 예정</div>
+                    <h1 class="font">{{ ootd.created_at|date:'m/d' }}</h1>
+                    <p class="lead">{{ ootd.title }}</p>
+                    <p class="read">{{ ootd.content }}</p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                            <i class="fa-solid fa-heart"></i>
+                            좋아요
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Comments Form -->
+        <div class="card my-3">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                        {% if ootd.head_image %}
-                            <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 450px;" alt="Responsive image">
-                        {% endif %}
-                    <div class="col-md-6">
-                        <div class="small mb-1">작성자 개발 예정</div>
-                        <h1 class="display-5 fw-bolder">{{ ootd.created_at }}</h1>
-                        <p class="lead">{{ ootd.title }}</p>
-                        <p>{{ ootd.content }}</p>
-                        <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="fa-solid fa-heart"></i>
-                                좋아요
-                            </button>
+                  <h5 class="card-header mb-4">댓글</h5>
+                  <div class="card-body">
+                    <form>
+                      <div class="form-group">
+                        <textarea class="form-control" rows="4"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-dark">Submit</button>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Single Comment -->
+                <div class="media mb-4">
+                  <img class="d-flex mr-3 rounded-circle" src="https://via.placeholder.com/50x50" alt="">
+                  <div class="media-body">
+                    <h5 class="mt-0">댓글 작성자</h5>
+                    김아길 최고 잘생겼다~~~~
+                  </div>
+                </div>
+
+                <!-- Comment with nested comments -->
+                <div class="media mb-4">
+                  <img class="d-flex mr-3 rounded-circle" src="https://via.placeholder.com/50x50" alt="">
+                  <div class="media-body">
+                    <h5 class="mt-0">댓글 작성자</h5>
+                    김아길 최고 잘생겼다~~~~
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related items section-->
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="fw-bolder mb-4">다른 OOTD 보기</h2>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h4 class="fw-bolder">예시</h4>
+                                <h6 class="lead">오늘의 OOTD.</h6>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h4 class="fw-bolder">예시</h4>
+                                <h6 class="lead">오늘의 OOTD.</h6>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                   <div class="card h-100">
+                        <!-- Product image-->
+                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h4 class="fw-bolder">예시</h4>
+                                <h6 class="lead">오늘의 OOTD.</h6>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                   <div class="card h-100">
+                        <!-- Product image-->
+                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h4 class="fw-bolder">예시</h4>
+                                <h6 class="lead">오늘의 OOTD.</h6>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Comments Form -->
-            <div class="card my-3">
-                <div class="container px-4 px-lg-5 my-5">
-                    <div class="row gx-4 gx-lg-5 align-items-center">
-                      <h5 class="card-header mb-4">댓글</h5>
-                      <div class="card-body">
-                        <form>
-                          <div class="form-group">
-                            <textarea class="form-control" rows="4"></textarea>
-                          </div>
-                          <button type="submit" class="btn btn-dark">Submit</button>
-                        </form>
-                      </div>
-                    </div>
-
-                    <!-- Single Comment -->
-                    <div class="media mb-4">
-                      <img class="d-flex mr-3 rounded-circle" src="https://via.placeholder.com/50x50" alt="">
-                      <div class="media-body">
-                        <h5 class="mt-0">댓글 작성자</h5>
-                        김아길 최고 잘생겼다~~~~
-                      </div>
-                    </div>
-
-                    <!-- Comment with nested comments -->
-                    <div class="media mb-4">
-                      <img class="d-flex mr-3 rounded-circle" src="https://via.placeholder.com/50x50" alt="">
-                      <div class="media-body">
-                        <h5 class="mt-0">댓글 작성자</h5>
-                        김아길 최고 잘생겼다~~~~
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related items section-->
-        <section class="py-5 bg-light">
-            <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4">다른 OOTD 보기</h2>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h4 class="fw-bolder">예시</h4>
-                                    <h6 class="lead">오늘의 OOTD.</h6>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h4 class="fw-bolder">예시</h4>
-                                    <h6 class="lead">오늘의 OOTD.</h6>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                       <div class="card h-100">
-                            <!-- Product image-->
-                            <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h4 class="fw-bolder">예시</h4>
-                                    <h6 class="lead">오늘의 OOTD.</h6>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                       <div class="card h-100">
-                            <!-- Product image-->
-                            <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h4 class="fw-bolder">예시</h4>
-                                    <h6 class="lead">오늘의 OOTD.</h6>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    {% endblock %}
+        </div>
+    </section>
+{% endblock %}

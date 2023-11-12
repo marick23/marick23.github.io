@@ -2,26 +2,26 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-right: 383px;
-  padding-left: 383px;
+  padding-right: 400px;
+  padding-left: 400px;
 }
 
 .card-row {
   width: 100%; /* 한 줄에 두 개의 카드를 나열하기 위해 100% 너비 설정 */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 10px; /* 각 줄 사이의 간격을 조절하려면 조정 가능 */
 }
 
 .card {
-  min-width: 400px; /* 카드의 최소 너비를 설정 */
+  /*min-width: 558px; /* 최소 카드 너비를 이미지의 가로 크기와 일치하도록 설정 */
   width: 48%; /* 두 개의 카드가 동일한 줄에 나열되도록 48% 너비 설정 */
-  margin-left: 15px auto;
-  margin-bottom: 25px;
+  margin: 0 0 25px; /* 전체적인 여백을 조절합니다. */
+  /*margin-bottom: 25px;*/
   border: 1px solid #ccc;
   /* 나머지 스타일 속성을 필요에 따라 추가 및 조정할 수 있습니다. */
 }
 .card-img-top {
-  width: 558px; /* 이미지의 가로 크기를 200px로 설정 */
-  height: 290px; /* 이미지의 세로 크기를 150px로 설정 */
+  width: 508px auto; /* 이미지의 가로 크기가 카드에 가득 차도록 설정 */
+  height: 240px auto; /* 이미지의 세로 크기가 카드에 가득 차도록 설정 */
 }
