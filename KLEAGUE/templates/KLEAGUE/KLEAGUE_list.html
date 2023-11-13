@@ -20,7 +20,7 @@
                             <h5 class="card-title">{{ p.league_name }}</h5>
                             <p class="read"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></p>
                             <p><a href="#" class="text-primary">{{ p.content | truncatewords:10 }}</a></p>
-                            <p class="card-text text-right">{{ p.base_price }}</p>
+                            <p class="card-text text-right">{{ p.base_price|floatformat:"-2" }}원</p>
                         </div>
                       </div>
                   </div>

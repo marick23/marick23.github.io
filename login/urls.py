@@ -2,6 +2,6 @@ from django.urls import path
 from .import views
 
 urlpatterns = [
-    path('joinus/', views.memberjoin),
+    path('memberjoin/', views.memberjoin),
     path('', views.index),
 ]
