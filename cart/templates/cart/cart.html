@@ -24,7 +24,7 @@
                                         <div class="row"><a href="{{ k.get_absolute_url }}">{{ k.title }}</a></div>
             <!--                            <div class="row">(사이즈) :{{ k.L }}  <br>(마킹) :{{ k.없음 }}</div>-->
                                     </div>
-                                    <div class="col-md-3">&#8361;{{ k.base_price }} <span class="close">&#10005;</span></div>
+                                    <div class="col-md-3">&#8361;{{ k.base_price|floatformat:"-2" }}원 <span class="close">&#10005;</span></div>
                                     <hr>
                                 </div>
                             </div>

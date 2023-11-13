@@ -51,8 +51,9 @@
             <div class="cards">
               <img src="{{ p.head_image.url }}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
-                <p class="text-right">99,000원</small></p>
+                <h5 class="card-title">{{ p.league_name }}</h5>
+                <h5 class="read"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
+                <p class="text-right">{{ p.base_price|floatformat:"-2" }}원</small></p>
               </div>
             </div>
             {% endif %}
@@ -68,8 +69,9 @@
             <div class="cards">
               <img src="{{ p.head_image.url }}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
-                <p class="text-right">99,000원</small></p>
+                <h5 class="card-title">{{ p.league_name }}</h5>
+                <h5 class="read"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h5>
+                <p class="text-right">{{ p.base_price|floatformat:"-2" }}원</small></p>
               </div>
             </div>
             {% endfor %}
