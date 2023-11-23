@@ -28,8 +28,7 @@ def single_notice_page(request, pk):
 class NoticeCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Notice
     fields = ['title', 'content', 'head_image', 'file_upload']
-    # template_name = 'notice/edit.html'
-    template_name = 'notice/write1.html'
+    template_name = 'notice/write.html'
 
     def test_func(self):
         return self.request.user.is_superuser or self.request.user.is_staff

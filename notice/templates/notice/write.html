@@ -1,4 +1,5 @@
 {% extends 'notice/base.html' %}
+{% load crispy_forms_tags %}
 {% block main_area %}
     <section>
         <div class="board_wrap">
@@ -9,18 +10,35 @@
             <div class="board_write_wrap">
                 <div class="board_write">
                     <form method="post" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <table>
-                        {{ form }}
-                    </table>
+                        {% csrf_token %}
+                        <div class="title">
+                            <dl>
+                                <dt>제목</dt>
+                                <dd>{{ form.title | as_crispy_field }}</dd>
+                            </dl>
+                        </div>
+                        <div class="cont">
+                            <dl>
+                                <dt>내용</dt>
+                                <da>{{ form.content | as_crispy_field }}</da>
+                            </dl>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                {{ form.file_upload | as_crispy_field }}
+                            </dl>
+                            <dl>
+                                {{ form.head_image | as_crispy_field }}
+                            </dl>
+                        </div>
                         <div class="bt_wrap">
                             <button type="submit" class="on">등록</button>
-                            <a href="notice.html">취소</a>
+                            <a href="/notice/">취소</a>
                         </div>
                     </form>
+                    {{ form.media }}
                 </div>
             </div>
-            {{ form.media }}
         </div>
     </section>
 {% endblock %}
