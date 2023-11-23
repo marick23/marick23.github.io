@@ -38,6 +38,7 @@ dt {
     font-size: 0px;
     text-align: center;
 }
+.bt_wrap button,
 .bt_wrap a {
     display: inline-block;
     min-width: 80px;
@@ -50,10 +51,12 @@ dt {
 .bt_wrap a:first-child {
     margin-left: 0;
 }
+.bt_wrap button.on,
 .bt_wrap a.on {
     background: #000;
     color: #fff;
 }
+
 .board_list {
     width: 100%;
     border-top: 2px solid #000;
@@ -173,8 +176,6 @@ dt {
     font-size: 1.4rem;
 }
 
-/* .board_view .info dl dt {
-} */
 
 .board_view .info dl dd {
     margin-left: 10px;
@@ -184,32 +185,42 @@ dt {
     padding: 15px;
     border-bottom: 1px solid #000;
     line-height: 160%;
+    width: 100%;
     font-size: 1.4rem;
 }
+
 .board_write {
     border-top: 2px solid #000;
 }
 .board_write .title,
-.board_write .info {
+.board_write .cont {
     padding: 15px;
 }
 .board_write .info {
-    border-top: 1px dashed #ddd;
-    border-bottom: 1px solid #000;
-    font-size: 0;
+    font-size: 17px;
+    display: flex;
+
 }
 .board_write .title dl {
     font-size: 0;
 }
 .board_write .info dl {
     display: inline-block;
+    margin-bottom: 10px; /* 원하는 가로 길이로 조절 */
+    border-bottom: 1px dashed #ddd;
     width: 50%;
     vertical-align: middle;
 }
-.board_write .title dt,
 .board_write .title dd,
-.board_write .info dt,
-.board_write .info dd {
+.board_write .cont dt,
+.board_write .cont da {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    margin-top: 30px;
+    /*text-align: center;*/
+}
+.board_write .title dt {
     display: inline-block;
     vertical-align: middle;
     font-size: 1.4rem;
@@ -217,7 +228,7 @@ dt {
 }
 
 .board_write .title dt,
-.board_write .info dt {
+.board_write .cont dt {
     width: 100px;
 }
 .board_write .title dd{
@@ -233,7 +244,11 @@ dt {
     width: 80%;
 }
 .board_write .cont {
+    border-top: 1px solid #000;
     border-bottom: 1px solid #000;
+}
+.board_write .cont da {
+    width: 690px;
 }
 .board_write .cont textarea {
     display: block;
@@ -242,4 +257,14 @@ dt {
     box-sizing: border-box;
     border: 0;
     resize: vertical;
+    border: 1px solid black;
+}
+dt,
+da {
+    padding: 0;
+    margin: 0;
+}
+label[for=id_title],
+label[for=id_content] {
+    display: none;
 }

@@ -15,10 +15,10 @@
                             <dt>번호</dt>
                             <dd>{{ notice.pk }}</dd>
                         </dl>
-<!--                        <dl>-->
-<!--                            <dt>글쓴이</dt>-->
-<!--                            <dd>김아름</dd>-->
-<!--                        </dl>-->
+                        <dl>
+                            <dt>글쓴이</dt>
+                            <dd>{{ notice.author | upper }}</dd>
+                        </dl>
                         <dl>
                             <dt>작성일</dt>
                             <dd>{{ notice.created_at|date:'Y-m-d' }}</dd>
@@ -33,7 +33,7 @@
                             <img src="{{ notice.head_image.url }}" class="img-fluid" alt="{{ notice }} head image">
                             <br>
                         {% endif %}
-                            {{ notice.cont }}
+                            {{ notice.get_content_markdown | safe }}
                     </div>
 
                     {% if notice.file_upload %}
@@ -56,7 +56,11 @@
                 </div>
                 <div class="bt_wrap">
                     <a href="/notice/" class="on">목록</a>
-                    <a href="/edit/">수정</a>
+                    {% if user.is_authenticated and user == notice.author %}
+                      <a href="/notice/update_notice/{{ notice.pk }}/" role="button">
+                        수정
+                      </a>
+                    {% endif %}
                 </div>
             </div>
         </div>

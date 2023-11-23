@@ -12,7 +12,7 @@
                     <div class="top">
                         <div class="num">번호</div>
                         <div class="title">제목</div>
-<!--                        <div class="writer">글쓴이</div>-->
+                        <div class="writer">글쓴이</div>
                         <div class="date">작성일</div>
 <!--                        <div class="count">조회</div>-->
                     </div>
@@ -22,7 +22,7 @@
                         <div class="title">
                             <a href="{{ p.get_absolute_url }}">{{ p.title }}</a>
                         </div>
-<!--                        <div class="writer">김아름</div>-->
+                        <div class="writer">{{ p.author | upper }}</div>
                         <div class="date">{{ p.created_at|date:'Y-m-d' }}</div>
 <!--                        <div class="count">33</div>-->
                     </div>
@@ -40,8 +40,14 @@
                     <a href="#" class="bt last">>></a>
                 </div>
                 <div class="bt_wrap">
-                    <a href="/write/" class="on">등록</a>
-                    <!-- <a href="#">수정</a> -->
+                    {% if user.is_authenticated %}
+                        {% if user.is_superuser or user.is_staff %}
+                            <a class="on" href="/notice/create_notice/" role="button">
+                                등록
+                            </a>
+                        {% endif %}
+                    {% endif %}
+<!--                    <button type="submit" class="on">등록</button>-->
                 </div>
             </div>
         </div>
