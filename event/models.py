@@ -6,7 +6,7 @@ from markdownx.utils import markdown
 class EVENT(models.Model):
     objects = None
     title = models.CharField(max_length=50)
-    content = models.TextField()
+    content = MarkdownxField()
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

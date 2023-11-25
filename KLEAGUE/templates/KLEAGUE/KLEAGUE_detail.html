@@ -1,5 +1,7 @@
 {% extends 'KLEAGUE/base.html' %}
-
+{% block head_title %}
+    {{ kleague.league_name }}
+{% endblock %}
     {% block main_area %}
 
           <main class="mt-4">
@@ -73,6 +75,14 @@
                               </div>
                           </div>
                       </div>
+                      <div class="bt_wrap">
+                        <a href="/KLEAGUE/" class="on">목록</a>
+                        {% if user.is_authenticated and user == kleague.author %}
+                          <a href="/KLEAGUE/update_KLEAGUE/{{ kleague.pk }}/" role="button">
+                            수정
+                          </a>
+                        {% endif %}
+                      </div>
                   <nav>
                       <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">상세정보</a>
@@ -82,7 +92,13 @@
                   </nav>
                   <div class="tab-content" id="nav-tabContent">
                       <div class="tab-pane fade show active mt-5" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                          <img src="./image/상세이미지/kfa/kfa 상세.jpg" class="img-fluid" style="width: 1200px;" alt="Responsive image">
+                          <img src="{{ kleague.detail_image1.url }}" class="img-fluid" style="width: 1200px;" alt="Responsive image">
+                          {% if kleague.detail_image2 %}
+                            <img src="{{ kleague.detail_image2.url }}" class="img-fluid" alt="{{ kleague }} detail image2">
+                          {% endif %}
+                          {% if kleague.size_image %}
+                            <img src="{{ kleague.size_image.url }}" class="img-fluid" alt="{{ kleague }} size image">
+                          {% endif %}
                       </div>
                       <div class="tab-pane fade mt-5" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                           <div class="card-group">

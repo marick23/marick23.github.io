@@ -1,0 +1,92 @@
+{% extends 'KLEAGUE/base.html' %}
+{% block head_title %}
+    Create - KLEAGUE
+{% endblock %}
+{% load crispy_forms_tags %}
+    {% block main_area %}
+
+          <main class="mt-4">
+              <div class="container">
+                  <form method="post" enctype="multipart/form-data">
+                      {% csrf_token %}
+                          <div class="col-md-12">
+                              <div class="card rounded shadow-sm">
+                                  <div class="card-body">
+                                    <h4 class="card-title">{{ form.league_name | as_crispy_field }}<br>{{ form.title | as_crispy_field }}</h4>
+                                      <h4>{{ form.base_price | as_crispy_field }}</h4>
+                                    <h4 class="card-subtitle mb-2">{{ form.cont | as_crispy_field }}</h4>
+                                    <!-- 삭제예정-->
+                                    <div class="col-md-9">
+                                      <label for="validationCustom04">사이즈 선택</label>
+                                      <form method="GET">
+                                          <select name="size_option">
+                                            <option selected disabled value="">사이즈 선택</option>
+                                            <option value="option1">S</option>
+                                            <option value="option2">M</option>
+                                            <option value="option3">L</option>
+                                            <option value="option4">XL</option>
+                                            <option value="option5">XXL</option>
+                                            <option value="option6">XXXL</option>
+                                            <option value="option7">XXXXL</option>
+                                          </select>
+                                          <button type="submit" class="btn btn-primary">적용</button>
+                                      </form>
+                                    </div>
+                                    <div class="mt-4">
+                                        <div class="col-md-9">
+                                        <label for="validationCustom04">마킹 선택</label>
+    <!--                                        <h6>번호.마킹: + {{ kleague.option_price|floatformat:"-2" }}</h6>-->
+                                            <!-- 옵션 선택 폼 -->
+                                            <form method="GET">
+                                                <select name="selected_option">
+                                                    <option value="option1">1.김승규</option>
+                                                    <option value="option2">4. 김민재</option>
+                                                    <option value="option3">5. 김영권</option>
+                                                    <option value="option4">6. 김태환</option>
+                                                    <option value="option5">7. 손흥민</option>
+                                                    <option value="option6">9. 박용우</option>
+                                                    <option value="option7">10. 이재성</option>
+                                                    <option value="option8">11. 이강인</option>
+                                                    <option value="option9">14. 황인범</option>
+                                                    <option value="option10">15. 오현규</option>
+                                                    <option value="option11">16. 황의조</option>
+                                                    <option value="option12">23. 이기제</option>
+                                                    <option value="no_option">옵션없음</option>
+                                                </select>
+                                                <button type="submit" class="btn btn-primary">적용</button>
+                                            </form>
+
+                                            <p>{{ form.option_price | as_crispy_field }}</p>
+                                            <p>{{ form.base_price | as_crispy_field }}</p>
+                                            <!-- 삭제예정-->
+                                            <h4>총 상품 금액: {{ total_price|floatformat:"-2" }}</h4>
+                                            <!-- 삭제예정-->
+                                        </div>
+                                    </div>
+                                    <div class="row pt-3 pb-3">
+                                        <div class="col-12">
+                                          <button type="button" class="btn btn-secondary btn-lg btn-block btn-right">장바구니 담기</button>
+                                          <button type="button" class="btn btn-dark btn-lg btn-block">구매하기</button>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        <!-- 삭제예정-->
+                      <div class="tab-content" id="nav-tabContent">
+                          <div class="tab-pane fade show active mt-5" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                              {{ form.head_image | as_crispy_field }}
+                              {{ form.detail_image1 | as_crispy_field }}
+                              {{ form.detail_image2 | as_crispy_field }}
+                              {{ form.size_image | as_crispy_field }}
+                          </div>
+                      </div>
+                      <div class="bt_wrap">
+                        <button type="submit" class="on">등록</button>
+                        <a href="/KLEAGUE/">취소</a>
+                      </div>
+                      {{ form.media }}
+                  </form>
+              </div>
+          </main>
+    {% endblock %}

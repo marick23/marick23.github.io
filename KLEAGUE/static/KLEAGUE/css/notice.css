@@ -1,0 +1,26 @@
+/* 리스트 버튼 */
+.bt_wrap {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0px;
+    text-align: center;
+}
+.bt_wrap button,
+.bt_wrap a {
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+.bt_wrap a:first-child {
+    margin-left: 0;
+}
+.bt_wrap button.on,
+.bt_wrap a.on {
+    background: #000;
+    color: #fff;
+}
+/* 리스트 버튼 */

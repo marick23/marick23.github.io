@@ -24,13 +24,13 @@
                 </div>
               </div>
               <div class="bt_wrap">
-                    <a href="/Event/" class="on">목록</a>
-                    {% if user.is_authenticated and user == event.author %}
-                      <a href="/Event/update_event/{{ event.pk }}/" role="button">
-                        수정
-                      </a>
-                    {% endif %}
-                </div>
+                <a href="/Event/" class="on">목록</a>
+                {% if user.is_authenticated and user == event.author %}
+                  <a href="/Event/update_event/{{ event.pk }}/" role="button">
+                    수정
+                  </a>
+                {% endif %}
+              </div>
           </div>
       </div>
     </main>

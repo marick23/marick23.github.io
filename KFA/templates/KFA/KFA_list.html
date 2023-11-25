@@ -28,6 +28,15 @@
                   </div>
                   {% endfor %}
               </div>
+              <div class="bt_wrap">
+                {% if user.is_authenticated %}
+                    {% if user.is_superuser or user.is_staff %}
+                        <a class="on" href="/KFA/create_KFA/" role="button">
+                            등록
+                        </a>
+                    {% endif %}
+                {% endif %}
+              </div>
           </div>
       </div>
 
