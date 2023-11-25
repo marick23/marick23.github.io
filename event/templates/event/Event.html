@@ -15,28 +15,39 @@
                   <img src="{{ p.head_image.url }}" class="card-img-top" alt="{{ p }} head image">
                   {% endif %}
                   <div class="card-body">
-                    <h5 class="card-title">{{ p.title }}</h5>
+                    <h5 class="card-title">{{ p.title }}<br>{{ event.author | upper }}</h5>
                     <p class="card-text">{{ p.content }}</p>
                     <a href="{{ p.get_absolute_url }}" class="btn btn-outline-dark">자세히 보기</a>
                   </div>
                 </div>
             {% endfor %}
         </div>
+         <div class="board_list_wrap">
+            <div class="bt_wrap">
+                {% if user.is_authenticated %}
+                    {% if user.is_superuser or user.is_staff %}
+                        <a class="on" href="/Event/create_event/" role="button">
+                            등록
+                        </a>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
     </div>
 
-    <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-center mt-5">
-          <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-          </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="">1</a></li>
-          <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-          </a>
-          </li>
-      </ul>
-    </nav>
+<!--    <nav aria-label="Page navigation example">-->
+<!--      <ul class="pagination justify-content-center mt-5">-->
+<!--          <li class="page-item">-->
+<!--          <a class="page-link" href="#" aria-label="Previous">-->
+<!--              <span aria-hidden="true">&laquo;</span>-->
+<!--          </a>-->
+<!--          </li>-->
+<!--          <li class="page-item"><a class="page-link" href="">1</a></li>-->
+<!--          <li class="page-item">-->
+<!--          <a class="page-link" href="#" aria-label="Next">-->
+<!--              <span aria-hidden="true">&raquo;</span>-->
+<!--          </a>-->
+<!--          </li>-->
+<!--      </ul>-->
+<!--    </nav>-->
 {% endblock %}

@@ -1,4 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
+from markdownx.models import MarkdownxField
+from markdownx.utils import markdown
 
 class EVENT(models.Model):
     objects = None
@@ -8,10 +11,14 @@ class EVENT(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     head_image = models.ImageField(upload_to='event/imges/%Y/%m/%d/', blank=True)
-    #author : 추후 작성 예정
+
+    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
-        return f'[{self.pk}]{self.title}'
+        return f'[{self.pk}]{self.title} :: {self.author}'
 
     def get_absolute_url(self):
         return f'/Event/{self.pk}/'
+
+    def get_content_markdown(self):
+        return markdown(self.content)
