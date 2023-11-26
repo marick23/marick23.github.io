@@ -17,7 +17,7 @@
                     </div>
                     {% endif %}
                 <div class="col-md-6">
-                    <div class="small mb-1">작성자 개발 예정</div>
+                    <div class="small mb-1"><p>{{ ootd.author | upper }}</p></div>
                     <h1 class="font">{{ ootd.created_at|date:'m/d' }}</h1>
                     <p class="lead">{{ ootd.title }}</p>
                     <p class="read">{{ ootd.content }}</p>
@@ -28,6 +28,11 @@
                             좋아요
                         </button>
                     </div>
+                    {% if user.is_authenticated and user == ootd.author %}
+                          <a href="/OOTD/update_ootd/{{ ootd.pk }}/" role="button">
+                            수정
+                          </a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -73,22 +78,24 @@
             <h2 class="fw-bolder mb-4">다른 OOTD 보기</h2>
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
+                    {% for p in ootds %}
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
+                        <img src="{{ p.head_image.url }}" alt="{{ p }} head image" class="rounded float-left" style="width: 235px;">
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h4 class="fw-bolder">예시</h4>
-                                <h6 class="lead">오늘의 OOTD.</h6>
+                                <h4 class="fw-bolder">{{ p.title }}</h4>
+                                <h6 class="lead">{{ p.created_at|date:'m/d' }}</h6>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ p.get_absolute_url }}">보러가기</a></div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">

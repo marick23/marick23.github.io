@@ -8,27 +8,66 @@
 {% block main_area %}
 
 
-    <main class="mt-10">
+    <main class="mt-15">
       <div class="container">
-          <div class="row>">
+          <div class="row">
+              <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form method="GET" action="{% url 'ootd_list' %}">
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control" name="q" placeholder="검색어를 입력하세요">
+                                    <div class="input-group-append">
+<!--                                        <button type="submit" class="btn btn-outline-dark">검색</button> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="board_list_wrap">
+                        <div class="bt_wrap mt-10">
+                            {% if user.is_authenticated %}
+                                {% if user.is_Active or user.is_superuser or user.is_staff %}
+                                    <a class="on" href="/OOTD/create_ootd/" role="button">
+                                        등록
+                                    </a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                  </div>
+              </div>
+
             <div class="card-deck">
               {% for p in ootds %}
-              {% if forloop.revcounter <= 3 %}
               <div class="card">
-                <img src="{{ p.head_image.url }}" class="img-fluid rounded" alt="..." style="max-width: 100%">
+                <img src="{{ p.head_image.url }}" class="card-img-top" alt="{{ p }} head image">
                 <div class="badge badge-pill bg-warning text-white position-absolute" style="top: 0.5rem; right: 0.5rem; font-size: 20px;">Best</div>
                 <div class="card-body">
                   <h5 class="card-title">{{ p.created_at|date:'m/d' }}</h5>
-                  <p class="card-text">{{ p.title }}</p>
-                  <p class="card-text"><small class="text-muted">작성자 개발 예정</small></p>
+                  <h5 class="card-title">{{ p.title }}</h5>
+                  <p class="card-text"><small class="text-muted"><br>{{ .author | upper }}</small></p>
                   <p><a href="{{ p.get_absolute_url }}" class="text-primary">더보기</a></p>
                 </div>
               </div>
-              {% endif %}
+                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                      <div class="container">
+                          <div class="row">
+                          </div>
+                      </div>
+                {% endif %}
               {% endfor %}
             </div>
+<!--              버튼설정-->
+<!--            <div class="bt_wrap">-->
+<!--                {% if user.is_authenticated %}-->
+<!--                    {% if user.is_Active or user.is_superuser or user.is_staff %}-->
+<!--                        <a class="on" href="/OOTD/create_ootd/" role="button">-->
+<!--                            등록-->
+<!--                        </a>-->
+<!--                    {% endif %}-->
+<!--                {% endif %}-->
+<!--            </div>-->
           </div>
-        </div>
       </div>
     </main>
 
