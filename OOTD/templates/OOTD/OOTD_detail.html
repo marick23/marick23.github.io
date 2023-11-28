@@ -21,18 +21,21 @@
                     <h1 class="font">{{ ootd.created_at|date:'m/d' }}</h1>
                     <p class="lead">{{ ootd.title }}</p>
                     <p class="read">{{ ootd.content }}</p>
-                    <div class="d-flex">
-                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                            <i class="fa-solid fa-heart"></i>
-                            좋아요
-                        </button>
+                    <div class="d-flex flex-column align-items-start">
+                        <div class="d-flex align-items-center mb-3">
+                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                <i class="fa-solid fa-heart"></i>
+                                좋아요
+                            </button>
+                        </div>
+                        {% if user.is_authenticated and user == ootd.author %}
+                            <a href="/OOTD/update_ootd/{{ ootd.pk }}/" role="button" class="btn btn-dark flex-shrink-0">
+                                수정
+                            </a>
+                        {% endif %}
                     </div>
-                    {% if user.is_authenticated and user == ootd.author %}
-                          <a href="/OOTD/update_ootd/{{ ootd.pk }}/" role="button">
-                            수정
-                          </a>
-                    {% endif %}
+
                 </div>
             </div>
         </div>
@@ -79,6 +82,7 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
                     {% for p in ootds %}
+                    {% if forloop.revcounter <= 3 %}
                     <div class="card h-100">
                         <!-- Product image-->
                         <img src="{{ p.head_image.url }}" alt="{{ p }} head image" class="rounded float-left" style="width: 235px;">
@@ -95,61 +99,8 @@
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ p.get_absolute_url }}">보러가기</a></div>
                         </div>
                     </div>
+                    {% endif %}
                     {% endfor %}
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h4 class="fw-bolder">예시</h4>
-                                <h6 class="lead">오늘의 OOTD.</h6>
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                   <div class="card h-100">
-                        <!-- Product image-->
-                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h4 class="fw-bolder">예시</h4>
-                                <h6 class="lead">오늘의 OOTD.</h6>
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                   <div class="card h-100">
-                        <!-- Product image-->
-                        <img src="{{ ootd.head_image.url }}" class="rounded float-left" style="width: 235px;" alt="Responsive image">
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h4 class="fw-bolder">예시</h4>
-                                <h6 class="lead">오늘의 OOTD.</h6>
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">보러가기</a></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -3,8 +3,20 @@ from .models import EVENT
 from django.views.generic import CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 def index(request):
     events = EVENT.objects.all().order_by('-pk')
+
+    paginator = Paginator(events, 4)  # 한 페이지에 9개씩 게시물을 보여줍니다.
+
+    page_number = request.GET.get('page')
+    try:
+        events = paginator.page(page_number)
+    except PageNotAnInteger:
+        events = paginator.page(1)
+    except EmptyPage:
+        events = paginator.page(paginator.num_pages)
 
     return render(
         request,

@@ -3,6 +3,8 @@ from .models import OOTD
 from django.views.generic import CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 from django.views.generic import ListView
 
 
@@ -38,6 +40,16 @@ def ootd_list(request):
     else:
         # 검색어가 없을 경우, 모든 게시물
         ootds = OOTD.objects.all()
+
+    paginator = Paginator(ootds, 9)  # 한 페이지에 9개씩 게시물을 보여줍니다.
+
+    page_number = request.GET.get('page')
+    try:
+        ootds = paginator.page(page_number)
+    except PageNotAnInteger:
+        ootds = paginator.page(1)
+    except EmptyPage:
+        ootds = paginator.page(paginator.num_pages)
 
     return render(
         request,
