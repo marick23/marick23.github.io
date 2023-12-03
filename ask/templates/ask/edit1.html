@@ -1,0 +1,44 @@
+{% extends 'ask/base.html' %}
+{% load crispy_forms_tags %}
+{% block main_area %}
+    <section>
+        <div class="board_wrap">
+            <div class="board_title">
+                <strong>문의게시판</strong>
+                <p>상품관련 질문은 문의게시판을 이용해주세요.</p>
+            </div>
+            <div class="board_write_wrap">
+                <div class="board_write">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="title">
+                            <dl>
+                                <dt>제목</dt>
+                                <dd>{{ form.title | as_crispy_field }}</dd>
+                            </dl>
+                        </div>
+                        <div class="cont">
+                            <dl>
+                                <dt>내용</dt>
+                                <da>{{ form.content | as_crispy_field }}</da>
+                            </dl>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                {{ form.file_upload | as_crispy_field }}
+                            </dl>
+                            <dl>
+                                {{ form.head_image | as_crispy_field }}
+                            </dl>
+                        </div>
+                        <div class="bt_wrap">
+                            <button type="submit" class="on">수정</button>
+                            <a href="/ask/">취소</a>
+                        </div>
+                    </form>
+                    {{ form.media }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

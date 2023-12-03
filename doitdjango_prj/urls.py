@@ -33,6 +33,9 @@ urlpatterns = [
     path('payment/', include('payment.urls')),
     path('KLEAGUE/', include('KLEAGUE.urls')),
     path('markdownx/', include('markdownx.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('ask/', include('ask.urls')),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

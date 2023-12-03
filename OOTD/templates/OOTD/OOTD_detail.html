@@ -1,5 +1,5 @@
 {% extends 'OOTD/base.html' %}
-
+{% load crispy_forms_tags %}
 {% block css %}
 {% load static %}
     <link href="{% static 'OOTD/css/cards.css' %}" rel="stylesheet" type="text/css">
@@ -22,13 +22,6 @@
                     <p class="lead">{{ ootd.title }}</p>
                     <p class="read">{{ ootd.content }}</p>
                     <div class="d-flex flex-column align-items-start">
-                        <div class="d-flex align-items-center mb-3">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="fa-solid fa-heart"></i>
-                                좋아요
-                            </button>
-                        </div>
                         {% if user.is_authenticated and user == ootd.author %}
                             <a href="/OOTD/update_ootd/{{ ootd.pk }}/" role="button" class="btn btn-dark flex-shrink-0">
                                 수정
@@ -39,15 +32,17 @@
                 </div>
             </div>
         </div>
+
         <!-- Comments Form -->
         <div class="card my-3">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                   <h5 class="card-header mb-4">댓글</h5>
                   <div class="card-body">
-                    <form>
+                    <form id="comment-form" method="post" action="{% url 'new_comment' ootd.pk %}">
+                      {% csrf_token %}
                       <div class="form-group">
-                        <textarea class="form-control" rows="4"></textarea>
+                          {{ comment_form  | crispy }}
                       </div>
                       <button type="submit" class="btn btn-dark">Submit</button>
                     </form>
@@ -55,23 +50,20 @@
                 </div>
 
                 <!-- Single Comment -->
-                <div class="media mb-4">
-                  <img class="d-flex mr-3 rounded-circle" src="https://via.placeholder.com/50x50" alt="">
-                  <div class="media-body">
-                    <h5 class="mt-0">댓글 작성자</h5>
-                    김아길 최고 잘생겼다~~~~
-                  </div>
-                </div>
-
-                <!-- Comment with nested comments -->
-                <div class="media mb-4">
-                  <img class="d-flex mr-3 rounded-circle" src="https://via.placeholder.com/50x50" alt="">
-                  <div class="media-body">
-                    <h5 class="mt-0">댓글 작성자</h5>
-                    김아길 최고 잘생겼다~~~~
-                  </div>
-                </div>
+                {% if ootd.comment_set.exists %}
+                    {% for comment in ootd.comment_set.iterator %}
+                    <div class="media mb-4" id="comment-{{ comment.pk }}">
+                      {% load static %}
+                      <img class="d-flex mr-3 rounded-circle" src="{% static 'OOTD/image/user.png' %}" alt="" width="50" height="50">
+                      <div class="media-body">
+                        <h5 class="mt-0">{{ comment.author.username }} &nbsp;&nbsp;<small class="text-muted">{{ comment.created_at }}</small></h5>
+                        <p>{{ comment.content | linebreaks }}</p>
+                      </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
             </div>
+            <hr/>
         </div>
     </section>
 
@@ -79,29 +71,27 @@
     <section class="py-5 bg-light">
         <div class="container px-4 px-lg-5 mt-5">
             <h2 class="fw-bolder mb-4">다른 OOTD 보기</h2>
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    {% for p in ootds %}
-                    {% if forloop.revcounter <= 3 %}
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img src="{{ p.head_image.url }}" alt="{{ p }} head image" class="rounded float-left" style="width: 235px;">
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h4 class="fw-bolder">{{ p.title }}</h4>
-                                <h6 class="lead">{{ p.created_at|date:'m/d' }}</h6>
+            <div class="row gx-4 gx-lg-5">
+                {% for p in ootds %}
+                    <div class="col-4 mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img src="{{ p.head_image.url }}" alt="{{ p }} head image" class="rounded float-left" style="width: auto;">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h4 class="fw-bolder">{{ p.title }}</h4>
+                                    <h6 class="lead">{{ p.created_at|date:'m/d' }}</h6>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ p.get_absolute_url }}">보러가기</a></div>
                             </div>
                         </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ p.get_absolute_url }}">보러가기</a></div>
-                        </div>
                     </div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

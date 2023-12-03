@@ -24,7 +24,6 @@
                             </form>
                         </div>
                     </div>
-
                     <div class="board_list_wrap">
                         <div class="bt_wrap mt-10">
                             {% if user.is_authenticated %}
@@ -35,14 +34,13 @@
                                 {% endif %}
                             {% endif %}
                         </div>
-                  </div>
+                    </div>
               </div>
 
             <div class="card-deck">
               {% for p in ootds %}
-              <div class="card">
+              <div class="card1">
                 <img src="{{ p.head_image.url }}" class="card-img-top" alt="{{ p }} head image">
-                <div class="badge badge-pill bg-warning text-white position-absolute" style="top: 0.5rem; right: 0.5rem; font-size: 20px;">Best</div>
                 <div class="card-body">
                   <h5 class="card-title">{{ p.created_at|date:'m/d' }}</h5>
                   <h5 class="card-title">{{ p.title }}</h5>

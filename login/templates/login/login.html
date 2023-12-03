@@ -1,4 +1,5 @@
 {% extends 'login/base.html' %}
+{% load socialaccount %}
 
 {% block main_area %}
     <div id="login">
@@ -37,7 +38,7 @@
                                 <label for="보안접속" class="text-dark"><span>보안접속</span> <span><input id="보안접속" name="보안접속" type="checkbox"></span></label><br><br>
                                 <button class="btn btn-dark btn lg" type="button">LOG IN</button>
 
-                                <button class="btn btn-dark btn lg" type="button"><a href="/login/memberjoin/" style="color: #ffffff;">JOIN US</a></button>
+                                <a role="button" class="btn btn-dark btn lg" data-target="#loginModal" href="{% provider_login_url 'google' %}" style="color: #ffffff;">SOCIAL LOGIN</a>
 
 
 
@@ -56,4 +57,34 @@
             </div>
         </div>
     </div>
+
+   <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;Log In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}"><i class="fa-brands fa-google"></i>&nbsp;Log In With Google</a>
+                <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/login/"><i class="fa-regular fa-envelope"></i>&nbsp;Log In With Username</a>
+              </div>
+              <div class="col-md-6">
+                <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/signup/"><i class="fa-solid fa-envelope"></i>&nbsp;Sign Up With E-mail</a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+        </div>
+        </div>
+
 {% endblock %}

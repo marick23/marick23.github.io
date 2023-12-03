@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect
-from .models import OOTD
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import OOTD, Comment
 from django.views.generic import CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from .forms import CommentForm
 
 from django.views.generic import ListView
 
@@ -21,14 +22,18 @@ def index(request):
 
 def OOTD_detail(request, pk):
     ootd = OOTD.objects.get(pk=pk)
+    ootds = OOTD.objects.exclude(pk=pk).order_by('-created_at')[:3]
 
     return render(
         request,
         'OOTD/OOTD_detail.html',
         {
-            'ootd': ootd
+            'ootd': ootd,
+            'ootds': ootds,
+            'comment_form': CommentForm,
         }
     )
+
 
 def ootd_list(request):
     query = request.GET.get('q')  # GET 요청으로부터 검색어를 가져옵니다.
@@ -41,7 +46,7 @@ def ootd_list(request):
         # 검색어가 없을 경우, 모든 게시물
         ootds = OOTD.objects.all()
 
-    paginator = Paginator(ootds, 9)  # 한 페이지에 9개씩 게시물을 보여줍니다.
+    paginator = Paginator(ootds, 6)  # 한 페이지에 9개씩 게시물을 보여줍니다.
 
     page_number = request.GET.get('page')
     try:
@@ -60,6 +65,7 @@ def ootd_list(request):
         }
     )
 
+
 class OOTDCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = OOTD
     fields = ['title', 'content', 'head_image']
@@ -67,6 +73,7 @@ class OOTDCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 
     def test_func(self):
         return self.request.user.is_superuser or self.request.user.is_staff
+
     def form_valid(self, form):
         current_user = self.request.user
         if current_user.is_authenticated and (current_user.is_staff or current_user.is_superuser):
@@ -85,3 +92,30 @@ class OOTDUpdate(LoginRequiredMixin, UpdateView):
             return super(OOTDUpdate, self).dispatch(request, *args, **kwargs)
         else:
             raise PermissionDenied
+
+# 댓글 구현
+def new_comment(request, pk):
+    if request.user.is_authenticated:
+        ootd = get_object_or_404(OOTD, pk=pk)
+
+        if request.method == 'POST':
+            comment_form = CommentForm(request.POST)
+            if comment_form.is_valid():
+                comment = comment_form.save(commit=False)
+                comment.ootd = ootd
+                comment.author = request.user
+                comment.save()
+
+                return redirect('OOTD_detail', pk=ootd.pk)
+
+        comment_form = CommentForm()
+
+        return render(
+            request, 'OOTD_detail.html',
+            {
+                'ootd': ootd,
+                'comment_form': comment_form
+            }
+        )
+    else:
+        raise PermissionDenied

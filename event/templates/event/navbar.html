@@ -2,9 +2,20 @@
     <div class="container bg-white fixed-top">
         <ul class="nav justify-content-end border-bottom">
 
-            <li class="nav-item">
-              <a class="nav-link active text-body" href="/login/" class="text-dark">LOGIN</a>
-            </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/login/" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ user.username | upper }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="/accounts/logout">Log Out</a>
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link active text-body" href="/login/" class="text-dark">LOGIN</a>
+                    </li>
+                {% endif %}
 
             <li class="nav-item">
               <a class="nav-link text-body" href="/mypage/" class="text-dark">MYPAGE</a>
