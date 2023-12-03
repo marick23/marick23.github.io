@@ -1,7 +1,13 @@
 from django.contrib import admin
-from .models import KLEAGUE
+from .models import KLEAGUE, Category, Review
 # Register your models here.
 
 @admin.register(KLEAGUE)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'base_price', 'option_price']
+
+class CategoryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('name',)}
+
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Review)

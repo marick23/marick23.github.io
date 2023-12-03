@@ -86,8 +86,8 @@
                   <nav>
                       <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">상세정보</a>
-                        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Review</a>
-                        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Q&A</a>
+                        <!--<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Review</a>-->
+                        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Review</a>
                       </div>
                   </nav>
                   <div class="tab-content" id="nav-tabContent">
@@ -103,58 +103,42 @@
                           {% endif %}
 
                       </div>
-                      <div class="tab-pane fade mt-5" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                          <div class="card-group">
-                          <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">리뷰 작성란</h5>
-                              <p class="card-text">리뷰예시입니다. 작성란입니다.</p>
-                            </div>
-                            <div class="card-footer">
-                              <small class="text-muted">작성자: 강*동</small>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">리뷰 작성란</h5>
-                              <p class="card-text">리뷰 예시입니다. 리뷰 작성란입니다.</p>
-                            </div>
-                            <div class="card-footer">
-                              <small class="text-muted">작성자: 김*별</small>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">리뷰 작성란</h5>
-                              <p class="card-text">리뷰 작성란 입니다. 예시입니다.</p>
-                            </div>
-                            <div class="card-footer">
-                              <small class="text-muted">작성자: 한*정</small>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                          <div class="media mt-5">
-                                  {% load static %}
-                                  <img src="{% static 'KFA/image/예시.PNG' %}" style="width: 50px;" class="mr-3" alt="...">
-                                  <div class="media-body">
-                                    <h5 class="mt-0">Q&A 예시입니다.</h5>
-                                    재입고는 언제쯤 가능할까요?
 
-                                    <div class="media mt-3">
-                                      <a class="mr-3">
-                                        <img src="{% static 'KFA/image/예시.PNG' %}" style="width: 50px;" class="mr-3" alt="...">
-                                      </a>
-                                      <div class="media-body">
-                                        <h5 class="mt-0">답변예시입니다.</h5>
-                                        올해 재입고는 없을 예정입니다.
-                                      </div>
+
+                      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                          {% for Review in reviews %}
+                              <div class="card" style="width: 30rem;">
+                                    <div class="col-md-6">
+                                        <img src="{{ review.head_image.url }}" alt="{{ review }} head image" class="card-img-top" style="width: 250px;">
+                                        <div class="card-body">
+                                          <h5 class="card-title">{{ review.title }}</h5>
+                                          <p class="card-text">{{ review.content }}</p>
+
+                                          <div class="card-footer">
+                                            <small class="text-muted">작성자: {{ review.author | upper }}</small>
+                                            <small class="text-muted">작성일: {{ review.created_at }}</small>
+                                          </div>
+                                          <div class="d-flex flex-column align-items-start">
+                                            {% if user.is_authenticated and user == review.author %}
+                                                <a href="/KFA/update_review/{{ review.pk }}/" role="button" class="btn btn-dark flex-shrink-0">
+                                                    수정
+                                                </a>
+                                            {% endif %}
+                                          </div>
+                                        </div>
                                     </div>
-                                  </div>
+                              </div>
+                          {% endfor %}
+                      </div>
+                      <div class="board_list_wrap">
+                          <div class="bt_wrap mt-10">
+                              {% if user.is_authenticated %}
+                              {% if user.is_Active or user.is_superuser or user.is_staff %}
+                                  <a class="on" href="/KFA/create_review/" role="button">
+                                      리뷰 등록
+                                  </a>
+                              {% endif %}
+                              {% endif %}
                           </div>
                       </div>
                   </div>

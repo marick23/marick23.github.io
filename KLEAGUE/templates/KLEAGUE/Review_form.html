@@ -1,0 +1,38 @@
+{% extends 'KLEAGUE/base.html' %}
+
+{% block head_title %}
+    리뷰 작성하기
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block main_area %}
+    <main class="mt-4">
+      <div class="container">
+          <div class="row>">
+              <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="card">
+                    <div class="card-header">
+                      {{ form.title | as_crispy_field }}
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote">
+                        <p>{{ form.content | as_crispy_field }}</p>
+                      </blockquote>
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{ form.head_image | as_crispy_field }}
+                    </div>
+                  </div>
+                  <div class="bt_wrap">
+                    <button type="submit" class="on">등록</button>
+                    <a href="/KLEAGUE/">취소</a>
+                  </div>
+                  {{ form.media }}
+              </form>
+          </div>
+      </div>
+    </main>
+{% endblock %}
+

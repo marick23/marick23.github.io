@@ -38,4 +38,27 @@
           </div>
       </div>
 
+      <!-- 페이지네이션 -->
+      <div class="pagination justify-content-center mt-5">
+            <span class="step-links">
+                {% if kleagues.has_previous %}
+                    <a href="?page=1" class="btn btn-outline-dark">처음</a>
+                    <a href="?page={{ kleagues.previous_page_number }}" class="btn btn-outline-dark"><</a>
+                {% endif %}
+
+                {% for num in kleagues.paginator.page_range %}
+                    {% if kleagues.number == num %}
+                        <span class="current btn btn-dark">{{ num }}</span>
+                    {% else %}
+                        <a href="?page={{ num }}" class="btn btn-outline-dark" >{{ num }}</a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if kleagues.has_next %}
+                    <a href="?page={{ kleagues.next_page_number }}" class="btn btn-outline-dark"> > </a>
+                    <a href="?page={{ kleagues.paginator.num_pages }}" class="btn btn-outline-dark">마지막</a>
+                {% endif %}
+            </span>
+      </div>
+
 {% endblock %}
