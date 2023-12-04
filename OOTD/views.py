@@ -5,18 +5,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import CommentForm
-
-from django.views.generic import ListView
+from KLEAGUE.models import Category
 
 
 def index(request):
     ootds = OOTD.objects.all().order_by('-pk')
-
+    categories = Category.objects.all()
     return render(
         request,
         'OOTD/OOTD.html',
         {
-            'ootds': ootds
+            'ootds': ootds,
+            'categories': categories,
         }
     )
 
@@ -36,6 +36,7 @@ def OOTD_detail(request, pk):
 
 
 def ootd_list(request):
+    categories = Category.objects.all()
     query = request.GET.get('q')  # GET 요청으로부터 검색어를 가져옵니다.
 
     if query:
@@ -61,7 +62,8 @@ def ootd_list(request):
 
         'OOTD/ootd.html',
         {
-            'ootds': ootds
+            'ootds': ootds,
+            'categories': categories
         }
     )
 
@@ -119,3 +121,4 @@ def new_comment(request, pk):
         )
     else:
         raise PermissionDenied
+

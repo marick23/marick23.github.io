@@ -61,6 +61,7 @@ def KLEAGUE_detail(request, kleague_id):
     kleague = KLEAGUE.objects.get(id=kleague_id)
     selected_option = request.GET.get('selected_option')  # 옵션 선택 여부를 가져옴
     size_option = request.GET.get('size_option')
+    categories = Category.objects.all()
 
     if selected_option == "no_option":
         # "옵션 없음"을 선택한 경우, 옵션 가격을 0으로 설정
@@ -81,8 +82,17 @@ def KLEAGUE_detail(request, kleague_id):
         'total_price': total_price,
         'size_option' : size_option,
         'selected_option': selected_option,
+        'categories': categories,
     }
     return render(request, 'KLEAGUE/KLEAGUE_detail.html', context)
+
+    # return render(
+    #     request,
+    #     'KLEAGUE/KLEAGUE_detail.html',
+    #     {
+    #         'categories': categories,
+    #     }
+    # )
 
 class KLEAGUECreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = KLEAGUE

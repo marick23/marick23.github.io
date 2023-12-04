@@ -4,9 +4,11 @@ from django.views.generic import CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from KLEAGUE.models import Category
 
 def index(request):
     notices = Notice.objects.all().order_by('-pk')
+    categories = Category.objects.all()
 
     paginator = Paginator(notices, 5)  # 한 페이지에 9개씩 게시물을 보여줍니다.
 
@@ -22,18 +24,21 @@ def index(request):
         request,
         'notice/notice.html',
         {
-            'notices' : notices
+            'notices' : notices,
+            'categories': categories
         }
     )
 
 def single_notice_page(request, pk):
     notice = Notice.objects.get(pk=pk)
+    categories = Category.objects.all()
 
     return render(
         request,
         'notice/view.html',
         {
             'notice' : notice,
+            'categories': categories
         }
     )
 

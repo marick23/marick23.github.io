@@ -4,10 +4,11 @@ from django.views.generic import CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from KLEAGUE.models import Category
 
 def index(request):
     asks = Ask.objects.all().order_by('-pk')
+    categories = Category.objects.all()
 
     paginator = Paginator(asks, 5)  # 한 페이지에 5개씩 게시물을 보여줍니다.
 
@@ -23,7 +24,8 @@ def index(request):
         request,
         'ask/ask.html',
         {
-            'asks': asks
+            'asks': asks,
+            'categories': categories
         }
     )
 

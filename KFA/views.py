@@ -7,17 +7,20 @@ from KLEAGUE.models import Category, KLEAGUE
 
 def index(request):
     kfas = KFA.objects.all().order_by('-pk')
+    categories = Category.objects.all()
     return render(
         request,
         'KFA/KFA_list.html',
         {
             'kfas': kfas,
+            'categories': categories,
         }
     )
 def KFA_detail(request, kfa_id):
     kfa = KFA.objects.get(id=kfa_id)
     selected_option = request.GET.get('selected_option')  # 옵션 선택 여부를 가져옴
     size_option = request.GET.get('size_option')
+    categories = Category.objects.all()
 
     if selected_option == "no_option":
         # "옵션 없음"을 선택한 경우, 옵션 가격을 0으로 설정
@@ -38,6 +41,7 @@ def KFA_detail(request, kfa_id):
         'total_price': total_price,
         'size_option' : size_option,
         'selected_option': selected_option,
+        'categories': categories,
     }
     return render(request, 'KFA/KFA_detail.html', context)
 
