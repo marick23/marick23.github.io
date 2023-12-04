@@ -23,6 +23,7 @@ def index(request):
 def OOTD_detail(request, pk):
     ootd = OOTD.objects.get(pk=pk)
     ootds = OOTD.objects.exclude(pk=pk).order_by('-created_at')[:3]
+    categories = Category.objects.all()
 
     return render(
         request,
@@ -31,6 +32,7 @@ def OOTD_detail(request, pk):
             'ootd': ootd,
             'ootds': ootds,
             'comment_form': CommentForm,
+            'categories': categories,
         }
     )
 
