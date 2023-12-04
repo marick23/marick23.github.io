@@ -1,15 +1,10 @@
 from django.shortcuts import render
-from login.models import Member
 
 # Create your views here.
-def infor(request):
-    members = Member.objects.all()
+def grade(request):
     return render(
         request,
-        'mypage/infor.html',
-        {
-            'members':members
-        }
+        'mypage/grade.html',
     )
 def index(request):
 

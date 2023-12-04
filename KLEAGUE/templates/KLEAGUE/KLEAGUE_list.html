@@ -5,11 +5,27 @@
     <link href="{% static 'KLEAGUE/css/card.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
+
 {% block main_area %}
 
       <div class="mt-5">
           <div class="container">
+              <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form method="GET" action="{% url 'KLEAGUE_list' %}">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" name="q" placeholder="검색어를 입력하세요">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-outline-dark">검색</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+              </div>
+              <br/>
+              <br/>
               <div class="card-container">
+
                   {% for p in kleagues %}
                   <div class="col-md-4">
                       <div class="card {% if forloop.counter0|divisibleby:4 %}left{% else %}right{% endif %}">

@@ -18,8 +18,3 @@ def company(request):
         request,
         'single_pages/company.html'
     )
-def searchingpage(request):
-    return render(
-        request,
-        'single_pages/searchingpage.html'
-    )

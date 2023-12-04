@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'single_pages',
     'cart',
     'event',
-    'login',
     'mypage',
     'OOTD',
     'payment',
@@ -158,4 +157,4 @@ SITE_ID = 1
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-LOGIN_REDIRECT_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'

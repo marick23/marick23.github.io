@@ -18,6 +18,7 @@
                               <div class="card-body">
                                 <h4 class="card-title">{{ kleague.league_name }}<br>{{ kleague.title }}</h4>
                                   <h4>{{ kleague.base_price|floatformat:"-2" }}원</h4>
+                                 <br/>
                                 <h4 class="card-subtitle mb-2">{{ kleague.content }}</h4>
                                 <div class="col-md-9">
                                   <label for="validationCustom03">사이즈 선택</label>
@@ -43,19 +44,20 @@
                                         <form method="GET">
                                             <select name="selected_option">
                                                 <option value="no_option">옵션없음</option>
-                                                <option value="option1">마킹 추가</option>
+                                                <option value="option1">마킹 추가(+20,000원)</option>
                                             </select>
 
-                                            <!--<input type="text" name="selected_option" placeholder="마킹 입력">-->
+
 
                                             <button type="submit" class="btn btn-primary">적용</button>
                                         </form>
+                                        <br/>
 
-                                        <p>Option Price: {{ kleague.option_price|floatformat:"-2" }}원</p>
-                                        <p>base Price: {{ kleague.base_price|floatformat:"-2" }}원</p>
+                                        <h>마킹 선택 시 작성 해주세요.</h>
+                                        <br/>
+                                        <input type="text" name="selected_option" placeholder="마킹 입력">
 
-                                        <h4>사이즈: {{ size_option }}</h4>
-                                        <h4>마킹: {{ selected_option }}</h4>
+                                        <hr/>
                                         <h4>총 상품 금액: {{ total_price|floatformat:"-2" }}원</h4>
 
                                     </div>
@@ -80,8 +82,6 @@
                   <nav>
                       <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">상세정보</a>
-                        <!--<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Review</a>-->
-                        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Review</a>
                       </div>
                   </nav>
                   <div class="tab-content" id="nav-tabContent">
@@ -93,46 +93,6 @@
                           {% if kleague.size_image %}
                             <img src="{{ kleague.size_image.url }}" class="img-fluid" alt="{{ kleague }} size image">
                           {% endif %}
-                      </div>
-
-                      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                          {% for review in reviews %}
-                                  <div class="mt-5">
-                                      <div class="col-md-6">
-                                          <div class="card">
-                                                <img src="{{ review.head_image.url }}" alt="{{ review }} head image" class="card-img-top" style="width: 300px;">
-                                                <div class="card-body">
-                                                  <h5 class="card-title">{{ review.title }}</h5>
-                                                  <p class="card-text">{{ review.content }}</p>
-
-                                                  <div class="card-footer">
-                                                    <small class="text-muted">작성자: {{ review.author | upper }}</small>
-                                                    <small class="text-muted">작성일: {{ review.created_at }}</small>
-                                                  </div>
-                                                  <div class="d-flex flex-column align-items-start">
-                                                    {% if user.is_authenticated and user == review.author %}
-                                                        <a href="{% url 'update_review' review.pk %}" role="button">수정</a>
-                                                    {% endif %}
-                                                  </div>
-                                                </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                          {% endfor %}
-                      </div>
-                      <div class="bt_wrap">
-                          <div class="bt_wrap mt-10">
-                                {% if user.is_authenticated %}
-                                    {% if user.is_active or user.is_superuser or user.is_staff %}
-                                        <form action="{% url 'create_review' kleague.id %}" method="post">
-                                            {% csrf_token %}
-                                            <input type="hidden" name="product_id" value="{{ kleague.id }}">
-                                            <button type="submit" class="on">리뷰 등록</button>
-                                        </form>
-                                        <a href="/KLEAGUE/">취소</a>
-                                    {% endif %}
-                                {% endif %}
-                          </div>
                       </div>
                   </div>
               </div>

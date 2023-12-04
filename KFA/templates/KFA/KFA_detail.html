@@ -18,6 +18,7 @@
                               <div class="card-body">
                                 <h4 class="card-title">{{ kfa.title }}</h4>
                                   <h4>{{ kfa.base_price|floatformat:"-2" }}원</h4>
+                                  <br/>
                                 <h4 class="card-subtitle mb-2">{{ kfa.content }}</h4>
                                 <div class="col-md-9">
                                   <label for="validationCustom04">사이즈 선택</label>
@@ -32,13 +33,11 @@
                                         <option value="option6">XXXL</option>
                                         <option value="option7">XXXXL</option>
                                       </select>
-                                      <button type="submit" class="btn btn-primary">적용</button>
                                   </form>
                                 </div>
                                 <div class="mt-4">
                                     <div class="col-md-9">
                                     <label for="validationCustom04">마킹 선택</label>
-<!--                                        <h6>번호.마킹: + {{ kfa.option_price|floatformat:"-2" }}</h6>-->
                                         <!-- 옵션 선택 폼 -->
                                         <form method="GET">
                                             <select name="selected_option">
@@ -59,9 +58,7 @@
                                             <button type="submit" class="btn btn-primary">적용</button>
                                         </form>
 
-                                        <p>Option Price: {{ kfa.option_price|floatformat:"-2" }}원</p>
-                                        <p>base Price: {{ kfa.base_price|floatformat:"-2" }}원</p>
-
+                                        <br/>
                                         <h4>총 상품 금액: {{ total_price|floatformat:"-2" }}원</h4>
 
                                     </div>
@@ -86,8 +83,6 @@
                   <nav>
                       <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">상세정보</a>
-                        <!--<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Review</a>-->
-                        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Review</a>
                       </div>
                   </nav>
                   <div class="tab-content" id="nav-tabContent">
@@ -102,44 +97,6 @@
                           <img src="{{ kfa.size_image.url }}" class="img-fluid" style="width: 1200px;" alt="Responsive image">
                           {% endif %}
 
-                      </div>
-
-
-                      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                          {% for Review in reviews %}
-                              <div class="card" style="width: 30rem;">
-                                    <div class="col-md-6">
-                                        <img src="{{ review.head_image.url }}" alt="{{ review }} head image" class="card-img-top" style="width: 250px;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">{{ review.title }}</h5>
-                                          <p class="card-text">{{ review.content }}</p>
-
-                                          <div class="card-footer">
-                                            <small class="text-muted">작성자: {{ review.author | upper }}</small>
-                                            <small class="text-muted">작성일: {{ review.created_at }}</small>
-                                          </div>
-                                          <div class="d-flex flex-column align-items-start">
-                                            {% if user.is_authenticated and user == review.author %}
-                                                <a href="/KFA/update_review/{{ review.pk }}/" role="button" class="btn btn-dark flex-shrink-0">
-                                                    수정
-                                                </a>
-                                            {% endif %}
-                                          </div>
-                                        </div>
-                                    </div>
-                              </div>
-                          {% endfor %}
-                      </div>
-                      <div class="board_list_wrap">
-                          <div class="bt_wrap mt-10">
-                              {% if user.is_authenticated %}
-                              {% if user.is_Active or user.is_superuser or user.is_staff %}
-                                  <a class="on" href="/KFA/create_review/" role="button">
-                                      리뷰 등록
-                                  </a>
-                              {% endif %}
-                              {% endif %}
-                          </div>
                       </div>
                   </div>
               </div>

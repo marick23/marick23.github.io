@@ -1,21 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import KFA, Review
+from .models import KFA
 from django.views.generic import CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
-
-
-def reviewall(request):
-    reviews = Review.objects.all().order_by('-pk')
-
-    return render(
-        request,
-        'KFA/KFA_detail.html',
-        {
-            'reviews': reviews
-        }
-    )
-
+from KLEAGUE.models import Category, KLEAGUE
 
 def index(request):
     kfas = KFA.objects.all().order_by('-pk')
@@ -30,7 +18,6 @@ def KFA_detail(request, kfa_id):
     kfa = KFA.objects.get(id=kfa_id)
     selected_option = request.GET.get('selected_option')  # 옵션 선택 여부를 가져옴
     size_option = request.GET.get('size_option')
-    reviews = Review.objects.filter(product_id=kfa_id)
 
     if selected_option == "no_option":
         # "옵션 없음"을 선택한 경우, 옵션 가격을 0으로 설정
@@ -51,7 +38,6 @@ def KFA_detail(request, kfa_id):
         'total_price': total_price,
         'size_option' : size_option,
         'selected_option': selected_option,
-        'reviews': reviews
     }
     return render(request, 'KFA/KFA_detail.html', context)
 
@@ -81,43 +67,16 @@ class KFAUpdate(LoginRequiredMixin, UpdateView):
         else:
             raise PermissionDenied
 
+def category_page(request, slug):
+    category = Category.objects.get(slug=slug)
+    categories = Category.objects.all()
+    kleagues = KLEAGUE.objects.filter(category=category).order_by('-pk')
 
-# def review(request):
-#     reviews = Review.objects.all().order_by('-pk')  # Review 모델로 변경
-
-    # return render(
-    #     request,
-    #     'KFA/KFA_detail.html',
-    #     {
-    #         'reviews': reviews
-    #     }
-    # )
-
-# class REVIEWCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
-#     model = Review  # Review 모델로 변경
-#     fields = ['title', 'content', 'head_image']
-#     template_name = 'KFA/Review_form.html'
-#
-#     def test_func(self):
-#         return self.request.user.is_superuser or self.request.user.is_staff
-#
-#     def form_valid(self, form):
-#         current_user = self.request.user
-#         if current_user.is_authenticated and (current_user.is_staff or current_user.is_superuser or current_user.is_superuser):
-#             form.instance.author = current_user
-#             form.instance.product_id = self.request.GET.get('product_id')
-#             return super().form_valid(form)
-#         else:
-#             return redirect('/KFA/')
-#
-#
-# class REVIEWUpdate(LoginRequiredMixin, UpdateView):
-#     model = Review
-#     fields = ['title', 'content', 'head_image']
-#     template_name = 'KFA/Review_update.html'
-#
-#     def dispatch(self, request, *args, **kwargs):
-#         if request.user.is_authenticated and request.user == self.get_object().author:
-#             return super(REVIEWUpdate, self).dispatch(request, *args, **kwargs)
-#         else:
-#             raise PermissionDenied
+    return render(
+        request,
+        'KLEAGUE/KLEAGUE_list.html',
+        {
+            'kleagues': kleagues,
+            'categories': categories,
+        }
+    )
